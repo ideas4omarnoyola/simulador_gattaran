@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 08</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<style>
+    .boton{
+        cursor: pointer;
+    }
+</style>
+<body class="pagina">
+
+    <img class="elementos" id="fondo01" src="../img/pagina08/fondo01.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo02" src="../img/pagina08/fondo02.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo03" src="../img/pagina08/fondo03.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo04" src="../img/pagina08/fondo04.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo05" src="../img/pagina08/fondo05.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo06" src="../img/pagina08/fondo06.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo07" src="../img/pagina08/fondo07.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo08" src="../img/pagina08/fondo08.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo09" src="../img/pagina08/fondo09.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo10" src="../img/pagina08/fondo10.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo11" src="../img/pagina08/fondo11.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="fondo12" src="../img/pagina08/fondo12.png" data-posX="0" data-posY="0"/>
+
+    <div class="elementos boton" id="boton01" data-posX="365.76" data-posY="380" style="width:349.50px;  height:53.60px; border: solid black;"></div>
+    <div class="elementos boton" id="boton02" data-posX="185.96" data-posY="112.55" style="width:56.36px;  height:56.36px; border: solid black;"></div>
+    <div class="elementos boton" id="boton03" data-posX="185.96" data-posY="406.53" style="width:227.84px;  height:43.437px; border: solid black;"></div>
+    <div class="elementos boton" id="boton04" data-posX="739.67" data-posY="288.28" style="width:69.90px;  height:21.719px; border: solid black;"></div>
+    <div class="elementos boton" id="boton05" data-posX="229.137" data-posY="199.26" style="width:603.68px;  height:272.82px; border: solid black;"></div>
+    <div class="elementos boton" id="boton06" data-posX="483.27" data-posY="461.87" style="width:409.85px;  height:45.385px; border: solid black;"></div>
+    <div class="elementos boton" id="boton07" data-posX="467.98" data-posY="459.6" style="width:109.93px;  height:58.423px; border: solid black;"></div>
+    <div class="elementos boton" id="boton08" data-posX="317.14" data-posY="194.1" style="width:389.71px;  height:51.73px; border: solid black;"></div>
+    <div class="elementos boton" id="boton09_1" data-posX="665.108" data-posY="228.35" style="width:51.264px;  height:218.94px; border: solid black;"></div>
+    <div class="elementos boton" id="boton09_2" data-posX="609.97" data-posY="447.29" style="width:110.26px;  height:43.86px; border: solid black;"></div>
+    <div class="elementos boton" id="boton10" data-posX="717.86" data-posY="215.46" style="width:89px;  height:47.36px; border: solid black;"></div>
+    <div class="elementos boton" id="boton11" data-posX="374.12 " data-posY="447.06" style="width:48.56px;  height:53.23px; border: solid black;"></div>
+    <div class="elementos boton" id="boton12" data-posX="209.71" data-posY="327.268" style="width:212.97px;  height:58px; border: solid black;"></div>
+
+    <img class="elementos" id="paloma01" src="../img/pagina08/paloma01.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma02" src="../img/pagina08/paloma02.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma03" src="../img/pagina08/paloma03.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma04" src="../img/pagina08/paloma04.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma05" src="../img/pagina08/paloma05.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma06" src="../img/pagina08/paloma06.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma07" src="../img/pagina08/paloma07.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma08" src="../img/pagina08/paloma08.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma09_1" src="../img/pagina08/paloma09_1.png" data-posX="665.108" data-posY="179"/>
+    <img class="elementos" id="paloma09_2" src="../img/pagina08/paloma09_2.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma10" src="../img/pagina08/paloma10.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma11" src="../img/pagina08/paloma11.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="paloma12" src="../img/pagina08/paloma12.png" data-posX="0" data-posY="0"/>
+    
+    <img class="elementos" id="tache" src="../img/pagina08/tache.png" data-posX="0" data-posY="0"/>
+
+    
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const fondo01 = $('#fondo01');
+        const fondo02 = $('#fondo02');
+        const fondo03 = $('#fondo03');
+        const fondo04 = $('#fondo04');
+        const fondo05 = $('#fondo05');
+        const fondo06 = $('#fondo06');
+        const fondo07 = $('#fondo07');
+        const fondo08 = $('#fondo08');
+        const fondo09 = $('#fondo09');
+        const fondo10 = $('#fondo10');
+        const fondo11 = $('#fondo11');
+        const fondo12 = $('#fondo12');
+
+        const boton01 = $('#boton01');
+        const boton02 = $('#boton02');
+        const boton03 = $('#boton03');
+        const boton04 = $('#boton04');
+        const boton05 = $('#boton05');
+        const boton06 = $('#boton06');
+        const boton07 = $('#boton07');
+        const boton08 = $('#boton08');
+        const boton09_1 = $('#boton09_1');
+        const boton09_2 = $('#boton09_2');
+        const boton10 = $('#boton10');
+        const boton11 = $('#boton11');
+        const boton12 = $('#boton12');
+
+        const paloma01 = $('#paloma01');
+        const paloma02 = $('#paloma02');
+        const paloma03 = $('#paloma03');
+        const paloma04 = $('#paloma04');
+        const paloma05 = $('#paloma05');
+        const paloma06 = $('#paloma06');
+        const paloma07 = $('#paloma07');
+        const paloma08 = $('#paloma08');
+        const paloma09_1 = $('#paloma09_1');
+        const paloma09_2 = $('#paloma09_2');
+        const paloma10 = $('#paloma10');
+        const paloma11 = $('#paloma11');
+        const paloma12 = $('#paloma12');
+
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/s_bien.mp3'),
+            new Audio('../audios/s_mal.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            animacionEntrada(fondo01, 'default', 1, 1);
+            animacionEntrada(boton01, 'default', 1, 1);
+        }
+        function finFondo01(){
+            fondo01.remove();
+            boton01.remove();
+            paloma01.remove();
+
+            animacionEntrada(fondo02, 'default', 1, 1);
+            animacionEntrada(boton02, 'default', 1, 1);
+        }
+        function finFondo02(){
+            fondo02.remove();
+            boton02.remove();
+            paloma02.remove();
+
+            animacionEntrada(fondo03, 'default', 1, 1);
+            animacionEntrada(boton03, 'default', 1, 1);
+        }
+        function finFondo03(){
+            fondo03.remove();
+            boton03.remove();
+            paloma03.remove();
+
+            animacionEntrada(fondo04, 'default', 1, 1);
+            animacionEntrada(boton04, 'default', 1, 1);
+        }
+        function finFondo04(){
+            fondo04.remove();
+            boton04.remove();
+            paloma04.remove();
+
+            animacionEntrada(fondo05, 'default', 1, 1);
+            animacionEntrada(boton05, 'default', 1, 1);
+        }
+        function finFondo05(){
+            fondo05.remove();
+            boton05.remove();
+            paloma05.remove();
+
+            animacionEntrada(fondo06, 'default', 1, 1);
+            animacionEntrada(boton06, 'default', 1, 1);
+        }
+        function finFondo06(){
+            fondo06.remove();
+            boton06.remove();
+            paloma06.remove();
+
+            animacionEntrada(fondo07, 'default', 1, 1);
+            animacionEntrada(boton07, 'default', 1, 1);
+        }
+        function finFondo07(){
+            fondo07.remove();
+            boton07.remove();
+            paloma07.remove();
+
+            animacionEntrada(fondo08, 'default', 1, 1);
+            animacionEntrada(boton08, 'default', 1, 1);
+        }
+        function finFondo08(){
+            fondo08.remove();
+            boton08.remove();
+            paloma08.remove();
+
+            animacionEntrada(fondo09, 'default', 1, 1);
+            animacionEntrada(boton09_1, 'default', 1, 1);
+        }
+        function finPaloma9_1(){
+            animacionEntrada(boton09_2, 'default', 1, 1);
+        }
+        function finFondo09(){
+            fondo09.remove();
+            boton09_1.remove();
+            boton09_2.remove();
+            paloma09_1.remove();
+            paloma09_2.remove();
+
+            animacionEntrada(fondo10, 'default', 1, 1);
+            animacionEntrada(boton10, 'default', 1, 1);
+        }
+        function finFondo10(){
+            fondo10.remove();
+            boton10.remove();
+            paloma10.remove();
+
+            animacionEntrada(fondo11, 'default', 1, 1);
+            animacionEntrada(boton11, 'default', 1, 1);
+        }
+        function finFondo11(){
+            fondo11.remove();
+            boton11.remove();
+            paloma11.remove();
+
+            animacionEntrada(fondo12, 'default', 1, 1);
+            animacionEntrada(boton12, 'default', 1, 1);
+        }
+        function finalPagina(){
+            setTimeout(() => {
+                aplicacion.siguientePagina();
+            }, 3000);
+        }
+
+        boton01.click(function(){
+            if(boton01.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma01, 'default', 1, 1);
+
+                setTimeout(() => {
+                    finFondo01();
+                }, 2000);
+            }
+        });
+        boton02.click(function(){
+            if(boton02.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma02, 'default', 1, 1);
+
+                setTimeout(() => {
+                    finFondo02();
+                }, 2000);
+            }
+        });
+
+        boton03.click(function(){
+            if(boton03.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma03, 'default', 1, 1);
+
+                setTimeout(() => {
+                    finFondo03();
+                }, 2000);
+            }
+        });
+        boton04.click(function(){
+            if(boton04.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma04, 'default', 1, 1);
+                
+                setTimeout(() => {
+                    finFondo04();
+                }, 2000);
+            }
+        });
+        boton05.click(function(){
+            if(boton05.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma05, 'default', 1, 1);
+                
+                setTimeout(() => {
+                    finFondo05();
+                }, 2000);
+            }
+        });
+        boton06.click(function(){
+            if(boton06.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma06, 'default', 1, 1);
+                
+                setTimeout(() => {
+                    finFondo06();
+                }, 2000);
+            }
+        });
+        boton07.click(function(){
+            if(boton07.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma07, 'default', 1, 1);
+                
+                setTimeout(() => {
+                    finFondo07();
+                }, 2000);
+            }
+        });
+        boton08.click(function(){
+            if(boton08.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma08, 'default', 1, 1);
+                
+                setTimeout(() => {
+                    finFondo08();
+                }, 2000);
+            }
+        });
+        boton09_1.click(function(){
+            if(boton09_1.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma09_1, 'default', 1, 1);
+
+                setTimeout(() => {
+                    finPaloma9_1();
+                }, 2000);
+            }
+        });
+        boton09_2.click(function(){
+            if(boton09_2.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma09_2, 'default', 1, 1);
+
+                setTimeout(() => {
+                    finFondo09();
+                }, 2000);
+            }
+        });
+        boton10.click(function(){
+            if(boton10.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma10, 'default', 1, 1);
+
+                setTimeout(() => {
+                    finFondo10();
+                }, 2000);
+               
+            }
+        });
+        boton11.click(function(){
+            if(boton11.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma11, 'default', 1, 1);
+                
+                setTimeout(() => {
+                    finFondo11();
+                }, 2000);
+            }
+        });
+
+        boton12.click(()=>{
+            if(boton12.css('cursor') == 'pointer'){
+                audio[0].play();
+                animacionEntrada(paloma12, 'default', 1);
+
+                setTimeout(() => {
+                    finalPagina();
+                }, 2000);
+            }
+        });
+
+        fondo01.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo02.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo03.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo04.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo05.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo06.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo06.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo08.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo09.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo10.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo11.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+        fondo12.click(function(){
+            aplicacion.reproducirAudio(audio[1], 1);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 09</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+
+    <img class="elementos" id="background" src="../img/pagina09/background.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="texto" src="../img/pagina09/texto.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="confeti" src="../img/pagina09/confeti.png" data-posX="0" data-posY="0"/>
+
+    
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+        const background = $('#background');
+        const texto = $('#texto');
+        const confeti = $('#confeti');
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/ovacion.mp3'),
+            new Audio('../audios/pedidos_9.mp3')
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            aplicacion.reproducirAudio(audio[0], finalCurso, 1);
+            animacionEntrada(background, 'default', 1, 1);
+            animacionEntrada(texto, 'default', 1, 2);
+            animacionEntrada(confeti, 'arriba-abajo', 1, 2);
+        }
+
+        function finalCurso(){
+            aplicacion.reproducirAudio(audio[1], finalPantalla, 1);
+            animacionSalida(confeti, 'default', 1);
+        }
+
+        function finalPantalla(){
+            console.log('Final');
+        }
+
+    </script>
+</body>
+</html>
