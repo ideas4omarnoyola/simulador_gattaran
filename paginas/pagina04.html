@@ -23,9 +23,13 @@
 <body class="pagina">
 
     <img class="elementos" id="fondo" src="../img/pagina04/fondo.png" data-posX="0" data-posY="0"/>
-    <a href="../infografia/CRM Farming Portifolio.pdf" target="_blank" class="elementos" id="boton" data-posX="688.979" data-posY="282.005">
-        <img src="../img/pagina04/boton.png" />
-    </a>
+    <img class="elementos" id="esquema" src="../img/pagina04/esquema.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="info_video" src="../img/pagina04/info_video.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="info_infografia" src="../img/pagina04/info_infografia.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="info_tutorial" src="../img/pagina04/info_tutorial.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="info_evaluacion" src="../img/pagina04/info_evaluacion.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="instrucciones" src="../img/pagina04/instrucciones.png" data-posX="0" data-posY="0"/>
+
 
     
     <!-- Script de la página -->
@@ -34,12 +38,22 @@
         // Variable----------------------------------------------------
         let aplicacion = parent;
         const fondo = $('#fondo');
-        const boton = $('#boton');
+        const esquema = $('#esquema');
+        const info01 = $('#info_video');
+        const info02 = $('#info_infografia');
+        const info03 = $('#info_tutorial');
+        const info04 = $('#info_evaluacion');
+        const info05 = $('#instrucciones');
 
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3')
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
         ]
 
         // Al cargarse la página
@@ -49,20 +63,34 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], activarBoton, 1);
+            aplicacion.reproducirAudio(audio[0], terminaAudio01, 1);
             animacionEntrada(fondo, 'default', 1, 1);
         }
 
-        function activarBoton(){
-            parpadear(boton);
+        function terminaAudio01(){
+            aplicacion.reproducirAudio(audio[1], terminaAudio02, 1);
+            animacionEntrada(esquema, 'default', 1, 1);
+            animacionEntrada(info01, 'default', 1, 1);
         }
-
-        boton.click(function(){
-            if(boton.css('cursor') == 'pointer'){
-                dejarParpadear(boton);
-                aplicacion.terminaPantalla();
-            }
-        });
+        function terminaAudio02(){
+            aplicacion.reproducirAudio(audio[2], terminaAudio03, 1);
+            animacionEntrada(info02, 'default', 1, 1);
+        }
+        function terminaAudio03(){
+            aplicacion.reproducirAudio(audio[3], terminaAudio04, 1);
+            animacionEntrada(info03, 'default', 1, 1);
+        }
+        function terminaAudio04(){
+            aplicacion.reproducirAudio(audio[4], terminaAudio05, 1);
+            animacionEntrada(info04, 'default', 1, 1);
+        }
+        function terminaAudio05(){
+            aplicacion.reproducirAudio(audio[5], finalPagina, 1);
+            animacionEntrada(info05, 'default', 1, 1);
+        }
+        function finalPagina(){
+            aplicacion.terminaPantalla();
+        }
 
     </script>
 </body>

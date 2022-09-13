@@ -23,6 +23,7 @@
 <body class="pagina">
 
     <img class="elementos" id="fondo" src="../img/pagina03/fondo.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="instrucciones" src="../img/pagina03/instrucciones.png" data-posX="0" data-posY="0"/>
 
     
     <!-- Script de la página -->
@@ -32,6 +33,7 @@
         let aplicacion = parent;
 
         const fondo = $('#fondo');
+        const instrucciones = $('#instrucciones');
 
 
         // Audios------------------------------------------------------
@@ -51,6 +53,7 @@
         }
 
         function finalPagina(){
+            animacionEntrada(instrucciones, 'default', 1, 1);
             aplicacion.terminaPantalla();
         }
 
