@@ -20,45 +20,440 @@
     <script src="../js/posicionar.js"></script>
 
 </head>
-<style>
-    .boton{
-        cursor: pointer;
-    }
-</style>
+
 <body class="pagina">
 
+    <img class="elementos" id="titulo" src="../img/pagina08/titulo.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="instrucciones" src="../img/pagina08/instrucciones.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="iniciar" src="../img/pagina08/iniciar.png" data-posX="444" data-posY="484"/>
-    <img class="elementos" id="botonInstrucciones" src="../img/pagina08/botonInstrucciones.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="popup" src="../img/pagina08/popup.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="cerrarPop" src="../img/pagina08/cerrarPop.png" data-posX="786" data-posY="199"/>
     
     <!-- Simulador1 -->
-    <img class="elementos" id="sim1" src="../img/pagina08/sim1.png" data-posX="0" data-posY="0"/>
-
+    <img class="elementos sims" id="sim1" src="../img/pagina08/sim1.png" data-posX="0" data-posY="0"/>
+    <div class="elementos zonas" id="zona1_1" data-posX="184" data-posY="138"></div>
+    <img class="elementos" id="paloma1_1" src="../img/pagina08/paloma.png" data-posX="152" data-posY="137"/>
     
+    <!-- Simulador2 -->
+    <img class="elementos sims" id="sim2" src="../img/pagina08/sim2.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim2_1" src="../img/pagina08/inst_sim2_1.png" data-posX="551" data-posY="278"/>
+    <img class="elementos" id="inst_sim2_2" src="../img/pagina08/inst_sim2_2.png" data-posX="255" data-posY="316"/>
+    <img class="elementos" id="inst_sim2_3" src="../img/pagina08/inst_sim2_3.png" data-posX="649" data-posY="341"/>
+    <img class="elementos" id="inst_sim2_4" src="../img/pagina08/inst_sim2_4.png" data-posX="258" data-posY="362"/>
+    <img class="elementos" id="inst_sim2_5" src="../img/pagina08/inst_sim2_5.png" data-posX="654" data-posY="448"/>
+
+    <input class="elementos" type="text" id="inputUsuario" data-posX="435" data-posY="272" placeholder="Ingresa tu usuario">
+    <input class="elementos" type="text" id="inputPass" data-posX="435" data-posY="308" placeholder="Ingresa tu password">
+    <input class="elementos" type="text" id="inputCodigo" data-posX="435" data-posY="355" placeholder="Ingresa código">
+
+    <div class="elementos zonas" id="zona2_1" data-posX="540" data-posY="351"></div>
+    <div class="elementos zonas" id="zona2_2" data-posX="428" data-posY="441"></div>
+
+    <img class="elementos" id="paloma2_1" src="../img/pagina08/paloma.png" data-posX="552" data-posY="263"/>
+    <img class="elementos" id="paloma2_2" src="../img/pagina08/paloma.png" data-posX="506" data-posY="312"/>
+    <img class="elementos" id="paloma2_3" src="../img/pagina08/paloma.png" data-posX="602" data-posY="345"/>
+    <img class="elementos" id="paloma2_4" src="../img/pagina08/paloma.png" data-posX="393" data-posY="356"/>
+    <img class="elementos" id="paloma2_5" src="../img/pagina08/paloma.png" data-posX="600" data-posY="449"/>
+
+    <!-- Simulador 3 -->
+    <img class="elementos sims" id="sim3" src="../img/pagina08/sim3.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim3_1" src="../img/pagina08/inst_sim3_1.png" data-posX="732" data-posY="185"/>
+    <div class="elementos zonas" id="zona3_1" data-posX="807" data-posY="122"></div>
+    <img class="elementos" id="paloma3_1" src="../img/pagina08/paloma.png" data-posX="758" data-posY="134"/>
+
+    <!-- Simulador 4 -->
+    <img class="elementos sims" id="sim4" src="../img/pagina08/sim4.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim4_1" src="../img/pagina08/inst_sim4_1.png" data-posX="747" data-posY="271"/>
+    <div class="elementos zonas" id="zona4_1" data-posX="832" data-posY="191"></div>
+    <img class="elementos" id="paloma4_1" src="../img/pagina08/paloma.png" data-posX="793" data-posY="174"/>
+
+    <!-- Simulador 5 -->
+    <img class="elementos sims" id="sim5" src="../img/pagina08/sim5.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim5_1" src="../img/pagina08/inst_sim5_1.png" data-posX="552" data-posY="177"/>
+    <div class="elementos zonas" id="zona5_1" data-posX="357" data-posY="191"></div>
+    <img class="elementos" id="paloma5_1" src="../img/pagina08/paloma.png" data-posX="493" data-posY="189"/>
+
+    <!-- Simulador 6 -->
+    <img class="elementos sims" id="sim6" src="../img/pagina08/sim6.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim6_1" src="../img/pagina08/inst_sim6_1.png" data-posX="484" data-posY="302"/>
+    <img class="elementos" id="inst_sim6_2" src="../img/pagina08/inst_sim6_2.png" data-posX="636" data-posY="209"/>
+    <div class="elementos zonas" id="zona6_1" data-posX="360" data-posY="289"></div>
+    <div class="elementos zonas" id="zona6_2" data-posX="466" data-posY="222"></div>
+    <img class="elementos" id="paloma6_1" src="../img/pagina08/paloma.png" data-posX="325" data-posY="284"/>
+    <img class="elementos" id="paloma6_2" src="../img/pagina08/paloma.png" data-posX="595" data-posY="218"/>
+
+    <!-- Simulador 7 -->
+    <img class="elementos sims" id="sim7" src="../img/pagina08/sim7.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim7_1" src="../img/pagina08/inst_sim7_1.png" data-posX="561" data-posY="220"/>
+    <div class="elementos zonas" id="zona7_1" data-posX="356" data-posY="221"></div>
+    <img class="elementos" id="paloma7_1" src="../img/pagina08/paloma.png" data-posX="494" data-posY="219"/>
+
+    <!-- Simulador 8 -->
+    <img class="elementos sims" id="sim8" src="../img/pagina08/sim8.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim8_1" src="../img/pagina08/inst_sim8_1.png" data-posX="550" data-posY="209"/>
+    <div class="elementos zonas" id="zona8_1" data-posX="351" data-posY="256"></div>
+    <img class="elementos" id="paloma8_1" src="../img/pagina08/paloma.png" data-posX="487" data-posY="278"/>
+
+    <!-- Simulador 9 -->
+    <img class="elementos sims" id="sim9" src="../img/pagina08/sim9.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim9_1" src="../img/pagina08/inst_sim9_1.png" data-posX="550" data-posY="209"/>
+    <div class="elementos zonas" id="zona9_1" data-posX="351" data-posY="252"></div>
+    <img class="elementos" id="paloma9_1" src="../img/pagina08/paloma.png" data-posX="418" data-posY="250"/>
+
+    <!-- Simulador 10 -->
+    <img class="elementos sims" id="sim10" src="../img/pagina08/sim10.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim10_1" src="../img/pagina08/inst_sim10_1.png" data-posX="344" data-posY="253"/>
+    <div class="elementos zonas" id="zona10_1" data-posX="146" data-posY="190"></div>
+    <img class="elementos" id="paloma10_1" src="../img/pagina08/paloma.png" data-posX="337" data-posY="187"/>
+
+    <!-- Simulador 11 -->
+    <img class="elementos sims" id="sim11" src="../img/pagina08/sim11.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim11_1" src="../img/pagina08/inst_sim11_1.png" data-posX="333" data-posY="194"/>
+    <div class="elementos zonas" id="zona11_1" data-posX="148" data-posY="231"></div>
+    <img class="elementos" id="paloma11_1" src="../img/pagina08/paloma.png" data-posX="290" data-posY="232"/>
+
+    <!-- Simulador 12 -->
+    <img class="elementos sims" id="sim12" src="../img/pagina08/sim12.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim12_1" src="../img/pagina08/inst_sim12_1.png" data-posX="311" data-posY="320"/>
+    <div class="elementos zonas" id="zona12_1" data-posX="159" data-posY="395"></div>
+    <img class="elementos" id="paloma12_1" src="../img/pagina08/paloma.png" data-posX="302" data-posY="396"/>
+
+    <!-- Simulador 13 -->
+    <img class="elementos sims" id="sim13" src="../img/pagina08/sim13.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim13_1" src="../img/pagina08/inst_sim13_1.png" data-posX="220" data-posY="304"/>
+    <div class="elementos zonas" id="zona13_1" data-posX="170" data-posY="243"></div>
+    <img class="elementos" id="paloma13_1" src="../img/pagina08/paloma.png" data-posX="249" data-posY="293"/>
+
+    <!-- Simulador 14 -->
+    <img class="elementos sims" id="sim14" src="../img/pagina08/sim14.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim14_1" src="../img/pagina08/inst_sim14_1.png" data-posX="401" data-posY="127"/>
+    <img class="elementos" id="inst_sim14_2" src="../img/pagina08/inst_sim14_2.png" data-posX="672" data-posY="246"/>
+    <input class="elementos" type="text" id="inputRol" data-posX="447" data-posY="190" placeholder="Ingresa Id del Rol">
+    <div class="elementos zonas" id="zona14_2" data-posX="778" data-posY="190"></div>
+    <img class="elementos" id="paloma14_1" src="../img/pagina08/paloma.png" data-posX="407" data-posY="192"/>
+    <img class="elementos" id="paloma14_2" src="../img/pagina08/paloma.png" data-posX="847" data-posY="190"/>
+    
+    <!-- Simulador 15 -->
+    <img class="elementos sims" id="sim15" src="../img/pagina08/sim15.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim15_1" src="../img/pagina08/inst_sim15_1.png" data-posX="339" data-posY="279"/>
+    <img class="elementos" id="inst_sim15_2" src="../img/pagina08/inst_sim15_2.png" data-posX="677" data-posY="281"/>
+    <div class="elementos zonas" id="zona15_1" data-posX="152" data-posY="357"></div>
+    <div class="elementos zonas" id="zona15_2" data-posX="805" data-posY="354"></div>
+    <img class="elementos" id="paloma15_1" src="../img/pagina08/paloma.png" data-posX="343" data-posY="358"/>
+    <img class="elementos" id="paloma15_2" src="../img/pagina08/paloma.png" data-posX="881" data-posY="358"/>
+    
+    <!-- Simulador 16 -->
+    <img class="elementos sims" id="sim16" src="../img/pagina08/sim16.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim16_1" src="../img/pagina08/inst_sim16_1.png" data-posX="130" data-posY="240"/>
+    <img class="elementos" id="inst_sim16_2" src="../img/pagina08/inst_sim16_2.png" data-posX="387" data-posY="299"/>
+    <img class="elementos" id="inst_sim16_3" src="../img/pagina08/inst_sim16_3.png" data-posX="330" data-posY="440"/>
+    <img class="elementos" id="inst_sim16_4" src="../img/pagina08/inst_sim16_4.png" data-posX="742" data-posY="414"/>
+    <div class="elementos zonas" id="zona16_1" data-posX="140" data-posY="339"></div>
+    <div class="elementos zonas" id="zona16_2" data-posX="248" data-posY="339"></div>
+    <div class="elementos zonas" id="zona16_3" data-posX="360" data-posY="383"></div>
+    <div class="elementos zonas" id="zona16_4" data-posX="791" data-posY="352"></div>
+    <img class="elementos" id="paloma16_1" src="../img/pagina08/paloma.png" data-posX="176" data-posY="299"/>
+    <img class="elementos" id="paloma16_2" src="../img/pagina08/paloma.png" data-posX="292" data-posY="299"/>
+    <img class="elementos" id="paloma16_3" src="../img/pagina08/paloma.png" data-posX="478" data-posY="384"/>
+    <img class="elementos" id="paloma16_4" src="../img/pagina08/paloma.png" data-posX="862" data-posY="355"/>
+
+    <!-- Simulador 17 -->
+    <img class="elementos sims" id="sim17" src="../img/pagina08/sim17.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim17_1" src="../img/pagina08/inst_sim17_1.png" data-posX="752" data-posY="372"/>
+    <div class="elementos zonas" id="zona17_1" data-posX="860" data-posY="310"></div>
+    <img class="elementos" id="paloma17_1" src="../img/pagina08/paloma.png" data-posX="816" data-posY="316"/>
+    
+    <!-- Simulador 18 -->
+    <img class="elementos sims" id="sim18" src="../img/pagina08/sim18.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim18_1" src="../img/pagina08/inst_sim18_1.png" data-posX="163" data-posY="195"/>
+    <img class="elementos" id="inst_sim18_2" src="../img/pagina08/inst_sim18_2.png" data-posX="411" data-posY="246"/>
+    <img class="elementos" id="inst_sim18_3" src="../img/pagina08/inst_sim18_3.png" data-posX="488" data-posY="315"/>
+    <img class="elementos" id="inst_sim18_4" src="../img/pagina08/inst_sim18_4.png" data-posX="529" data-posY="394"/>
+    <div class="elementos zonas" id="zona18_1" data-posX="272" data-posY="263"></div>
+    <div class="elementos zonas" id="zona18_2" data-posX="270" data-posY="333"></div>
+    <div class="elementos zonas" id="zona18_3" data-posX="371" data-posY="333"></div>
+    <div class="elementos zonas" id="zona18_4" data-posX="443" data-posY="371"></div>
+    <img class="elementos" id="paloma18_1" src="../img/pagina08/paloma.png" data-posX="366" data-posY="264"/>
+    <img class="elementos" id="paloma18_2" src="../img/pagina08/paloma.png" data-posX="302" data-posY="370"/>
+    <img class="elementos" id="paloma18_3" src="../img/pagina08/paloma.png" data-posX="391" data-posY="370"/>
+    <img class="elementos" id="paloma18_4" src="../img/pagina08/paloma.png" data-posX="464" data-posY="410"/>
+    
+    <!-- Simulador 19 -->
+    <img class="elementos sims" id="sim19" src="../img/pagina08/sim19.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim19_1" src="../img/pagina08/inst_sim19_1.png" data-posX="98" data-posY="227"/>
+    <div class="elementos zonas" id="zona19_1" data-posX="118" data-posY="154"></div>
+    <img class="elementos" id="paloma19_1" src="../img/pagina08/paloma.png" data-posX="185" data-posY="161"/>
+    
+    <!-- Simulador 20 -->
+    <img class="elementos sims" id="sim20" src="../img/pagina08/sim20.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim20_1" src="../img/pagina08/inst_sim20_1.png" data-posX="140" data-posY="344"/>
+    <div class="elementos zonas" id="zona20_1" data-posX="68" data-posY="448"></div>
+    <img class="elementos" id="paloma20_1" src="../img/pagina08/paloma.png" data-posX="185" data-posY="448"/>
+    
+    <!-- Simulador 21 -->
+    <img class="elementos sims" id="sim21" src="../img/pagina08/sim21.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="inst_sim21_1" src="../img/pagina08/inst_sim21_1.png" data-posX="37" data-posY="240"/>
+    <img class="elementos" id="inst_sim21_2" src="../img/pagina08/inst_sim21_2.png" data-posX="422" data-posY="279"/>
+    <div class="elementos zonas" id="zona21_1" data-posX="127" data-posY="365"></div>
+    <div class="elementos zonas" id="zona21_2" data-posX="550" data-posY="382"></div>
+    <img class="elementos" id="paloma21_1" src="../img/pagina08/paloma.png" data-posX="254" data-posY="363"/>
+    <img class="elementos" id="paloma21_2" src="../img/pagina08/paloma.png" data-posX="723" data-posY="381"/>
+
+    <img class="elementos" id="finalSimulacion" src="../img/pagina08/finalSimulacion.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="mensajeSig" src="../img/pagina08/mensajeSig.png" data-posX="0" data-posY="0"/>
+
+    <!-- Avisos bien y mal -->
+    <img class="elementos" id="mensajeBien" src="../img/pagina08/mensajeBien.png" data-posX="24" data-posY="222"/>
+    <img class="elementos" id="mensajeMal" src="../img/pagina08/mensajeMal.png" data-posX="24" data-posY="142"/>
+
+    <!-- Boton de instrucciones -->
+    <img class="elementos" id="botonInstrucciones" src="../img/pagina08/botonInstrucciones.png" data-posX="72" data-posY="495"/>
+    <img class="elementos" id="instruccionesPop" src="../img/pagina08/instruccionesPop.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="cerrarInstrucciones" src="../img/pagina08/cerrarPop.png" data-posX="833" data-posY="160"/>
+
     <!-- Script de la página -->
     <script>
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
 
+        const titulo = $('#titulo');
         const instrucciones = $('#instrucciones');
         const iniciar = $('#iniciar');
         const botonInstrucciones = $('#botonInstrucciones');
         const popup = $('#popup');
         const cerrarPop = $('#cerrarPop');
+        const cerrarInstrucciones = $('#cerrarInstrucciones');
+        const instruccionesPop = $('#instruccionesPop');
 
-        const sim = $('#sim');
+        const zonas = $('.zonas');
+        zonas.css({
+            'cursor': 'pointer',
+            'background': 'red'
+        });
+        
+        const sims = $('.sims');
+        sims.css('cursor', 'pointer');
+
+        const mensajeBien = $('#mensajeBien');
+        const mensajeMal = $('#mensajeMal');
+
+        const sim1 = $('#sim1');
+        const paloma1_1 = $('#paloma1_1');
+        const zona1_1 = $('#zona1_1');
+        zona1_1.css({'width': '430px', 'height': '23px'});
+        
+        const sim2 = $('#sim2');
+        const inst_sim2_1 = $('#inst_sim2_1');
+        const inst_sim2_2 = $('#inst_sim2_2');
+        const inst_sim2_3 = $('#inst_sim2_3');
+        const inst_sim2_4 = $('#inst_sim2_4');
+        const inst_sim2_5 = $('#inst_sim2_5');
+        const paloma2_1 = $('#paloma2_1');
+        const paloma2_2 = $('#paloma2_2');
+        const paloma2_3 = $('#paloma2_3');
+        const paloma2_4 = $('#paloma2_4');
+        const paloma2_5 = $('#paloma2_5');
+        const inputUsuario = $('#inputUsuario');
+        const inputPass = $('#inputPass');
+        const inputCodigo = $('#inputCodigo');
+        
+        const zona2_1 = $('#zona2_1');
+        const zona2_2 = $('#zona2_2');
+        zona2_1.css({'width': '56px', 'height': '15px'});
+        zona2_2.css({'width': '164px', 'height': '39px'});
+
+        inputUsuario.css({
+            'width': '105px',
+            'height': '30px',
+            'border': 'none'
+        });
+        
+        inputPass.css({
+            'width': '105px',
+            'height': '30px',
+            'border': 'none'
+        });
+        
+        inputCodigo.css({
+            'width': '105px',
+            'height': '30px',
+            'border': 'none'
+        });
+
+        const sim3 = $('#sim3');
+        const inst_sim3_1 = $('#inst_sim3_1');
+        const paloma3_1 = $('#paloma3_1');
+        const zona3_1 = $('#zona3_1');
+        zona3_1.css({'width': '101px', 'height': '41px'});
+
+        const sim4 = $('#sim4');
+        const inst_sim4_1 = $('#inst_sim4_1');
+        const paloma4_1 = $('#paloma4_1');
+        const zona4_1 = $('#zona4_1');
+        zona4_1.css({'width': '77px', 'height': '20px'});
+
+        const sim5 = $('#sim5');
+        const inst_sim5_1 = $('#inst_sim5_1');
+        const paloma5_1 = $('#paloma5_1');
+        const zona5_1 = $('#zona5_1');
+        zona5_1.css({'width': '126px', 'height': '20px'});
+
+        const sim6 = $('#sim6');
+        const inst_sim6_1 = $('#inst_sim6_1');
+        const inst_sim6_2 = $('#inst_sim6_2');
+        const paloma6_1 = $('#paloma6_1');
+        const paloma6_2 = $('#paloma6_2');
+        const zona6_1 = $('#zona6_1');
+        const zona6_2 = $('#zona6_2');
+        zona6_1.css({'width': '105px', 'height': '18px'});
+        zona6_2.css({'width': '118px', 'height': '22px'});
+
+        const sim7 = $('#sim7');
+        const inst_sim7_1 = $('#inst_sim7_1');
+        const paloma7_1 = $('#paloma7_1');
+        const zona7_1 = $('#zona7_1');
+        zona7_1.css({'width': '127px', 'height': '23px'});
+
+        const sim8 = $('#sim8');
+        const inst_sim8_1 = $('#inst_sim8_1');
+        const paloma8_1 = $('#paloma8_1');
+        const zona8_1 = $('#zona8_1');
+        zona8_1.css({'width': '122px', 'height': '71px'});
+
+        const sim9 = $('#sim9');
+        const inst_sim9_1 = $('#inst_sim9_1');
+        const paloma9_1 = $('#paloma9_1');
+        const zona9_1 = $('#zona9_1');
+        zona9_1.css({'width': '56px', 'height': '23px'});
+
+        const sim10 = $('#sim10');
+        const inst_sim10_1 = $('#inst_sim10_1');
+        const paloma10_1 = $('#paloma10_1');
+        const zona10_1 = $('#zona10_1');
+        zona10_1.css({'width': '182px', 'height': '24px'});
+
+        const sim11 = $('#sim11');
+        const inst_sim11_1 = $('#inst_sim11_1');
+        const paloma11_1 = $('#paloma11_1');
+        const zona11_1 = $('#zona11_1');
+        zona11_1.css({'width': '127px', 'height': '29px'});
+
+        const sim12 = $('#sim12');
+        const inst_sim12_1 = $('#inst_sim12_1');
+        const paloma12_1 = $('#paloma12_1');
+        const zona12_1 = $('#zona12_1');
+        zona12_1.css({'width': '127px', 'height': '29px'});
+
+        const sim13 = $('#sim13');
+        const inst_sim13_1 = $('#inst_sim13_1');
+        const paloma13_1 = $('#paloma13_1');
+        const zona13_1 = $('#zona13_1');
+        zona13_1.css({'width': '68px', 'height': '29px'});
+        
+        const sim14 = $('#sim14');
+        const inst_sim14_1 = $('#inst_sim14_1');
+        const inst_sim14_2 = $('#inst_sim14_2');
+        const paloma14_1 = $('#paloma14_1');
+        const paloma14_2 = $('#paloma14_2');
+        const inputRol = $('#inputRol');
+        const zona14_2 = $('#zona14_2');
+        zona14_2.css({'width': '56px', 'height': '29px'});
+
+        inputRol.css({
+            'width': '300px',
+            'height': '30px',
+            'border': 'none'
+        });
+        
+        const sim15 = $('#sim15');
+        const inst_sim15_1 = $('#inst_sim15_1');
+        const inst_sim15_2 = $('#inst_sim15_2');
+        const paloma15_1 = $('#paloma15_1');
+        const paloma15_2 = $('#paloma15_2');
+        const zona15_1 = $('#zona15_1');
+        const zona15_2 = $('#zona15_2');
+        zona15_1.css({'width': '177px', 'height': '29px'});
+        zona15_2.css({'width': '59px', 'height': '29px'});
+        
+        const sim16 = $('#sim16');
+        const inst_sim16_1 = $('#inst_sim16_1');
+        const inst_sim16_2 = $('#inst_sim16_2');
+        const inst_sim16_3 = $('#inst_sim16_3');
+        const inst_sim16_4 = $('#inst_sim16_4');
+        const paloma16_1 = $('#paloma16_1');
+        const paloma16_2 = $('#paloma16_2');
+        const paloma16_3 = $('#paloma16_3');
+        const paloma16_4 = $('#paloma16_4');
+        const zona16_1 = $('#zona16_1');
+        const zona16_2 = $('#zona16_2');
+        const zona16_3 = $('#zona16_3');
+        const zona16_4 = $('#zona16_4');
+        zona16_1.css({'width': '96px', 'height': '29px'});
+        zona16_2.css({'width': '106px', 'height': '29px'});
+        zona16_3.css({'width': '106px', 'height': '29px'});
+        zona16_4.css({'width': '59px', 'height': '29px'});
+
+        const sim17 = $('#sim17');
+        const inst_sim17_1 = $('#inst_sim17_1');
+        const paloma17_1 = $('#paloma17_1');
+        const zona17_1 = $('#zona17_1');
+        zona17_1.css({'width': '59px', 'height': '29px'});
+
+        const sim18 = $('#sim18');
+        const inst_sim18_1 = $('#inst_sim18_1');
+        const inst_sim18_2 = $('#inst_sim18_2');
+        const inst_sim18_3 = $('#inst_sim18_3');
+        const inst_sim18_4 = $('#inst_sim18_4');
+        const paloma18_1 = $('#paloma18_1');
+        const paloma18_2 = $('#paloma18_2');
+        const paloma18_3 = $('#paloma18_3');
+        const paloma18_4 = $('#paloma18_4');
+        const zona18_1 = $('#zona18_1');
+        const zona18_2 = $('#zona18_2');
+        const zona18_3 = $('#zona18_3');
+        const zona18_4 = $('#zona18_4');
+        zona18_1.css({'width': '78px', 'height': '29px'});
+        zona18_2.css({'width': '90px', 'height': '29px'});
+        zona18_3.css({'width': '67px', 'height': '29px'});
+        zona18_4.css({'width': '67px', 'height': '29px'});
+
+        const sim19 = $('#sim19');
+        const inst_sim19_1 = $('#inst_sim19_1');
+        const paloma19_1 = $('#paloma19_1');
+        const zona19_1 = $('#zona19_1');
+        zona19_1.css({'width': '59px', 'height': '29px'});
+
+        const sim20 = $('#sim20');
+        const inst_sim20_1 = $('#inst_sim20_1');
+        const paloma20_1 = $('#paloma20_1');
+        const zona20_1 = $('#zona20_1');
+        zona20_1.css({'width': '51px', 'height': '36px'});
+
+        const sim21 = $('#sim21');
+        const inst_sim21_1 = $('#inst_sim21_1');
+        const inst_sim21_2 = $('#inst_sim21_2');
+        const paloma21_1 = $('#paloma21_1');
+        const paloma21_2 = $('#paloma21_2');
+        const zona21_1 = $('#zona21_1');
+        const zona21_2 = $('#zona21_2');
+        zona21_1.css({'width': '105px', 'height': '18px'});
+        zona21_2.css({'width': '165px', 'height': '22px'});
+
+        const mensajeSig = $('#mensajeSig');
+        const finalSimulacion = $('#finalSimulacion');
 
         botonInstrucciones.css('cursor', 'pointer');
+        cerrarInstrucciones.css('cursor', 'pointer');
 
         // Audios------------------------------------------------------
         const audio = [
             new Audio('../audios/audio0.mp3'),
             new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3'),
+            new Audio('../audios/audio0.mp3'),
         ]
 
         // Al cargarse la página
@@ -69,6 +464,7 @@
 
         function iniciarContenido(){
             aplicacion.reproducirAudio(audio[0], parpadearInicio, 1);
+            animacionEntrada(titulo, 'default', 1, 1);
             animacionEntrada(instrucciones, 'default', 1, 1);
         }
 
@@ -78,7 +474,6 @@
 
         iniciar.click(function(){
             if(iniciar.css('cursor') == 'pointer'){
-                dejar
                 aplicacion.reproducirAudio(audio[1], parpadeaCerrar, 1);
                 animacionEntrada(popup, 'default', 1, 1);
                 dejarParpadear(iniciar);
@@ -93,11 +488,697 @@
             if(cerrarPop.css('cursor') == 'pointer'){
                 animacionSalida(popup, 'default', 1, 1);
                 animacionSalida(cerrarPop, 'default', 1, 1);
+                animacionSalida(instrucciones, 'default', 1, 1);
+                animacionSalida(iniciar, 'default', 1, 1);
+
+                iniciaSimulador();
             }
         });
 
+        function iniciaSimulador(){
+            aplicacion.reproducirAudio(audio[2], entradaSim1, 1);
+            animacionEntrada(botonInstrucciones, 'default', 1, 1);
+        }
 
+        botonInstrucciones.click(function(){
+            animacionEntrada(instruccionesPop, 'default', 1);
+            animacionEntrada(cerrarInstrucciones, 'default', 1);
+        });
+
+        cerrarInstrucciones.click(function(){
+            animacionSalida(instruccionesPop, 'default', 1);
+            animacionSalida(cerrarInstrucciones, 'default', 1);
+        });
+
+        function correcto(siguienteFuncion){
+            audio[3].play();
+            animacionEntrada(mensajeBien, 'default', 1);
+            
+            setTimeout(()=>{
+                animacionSalida(mensajeBien, 'default', 1);
+                siguienteFuncion();
+            }, 2000);
+        }
+
+        function mal(){
+            aplicacion.reproducirAudio(audio[4], salidaMal, 1);
+            animacionEntrada(mensajeMal, 'default', 1);
+        }
         
+        function salidaMal(){
+            animacionSalida(mensajeMal, 'default', 1);
+            sims.css('cursor', 'pointer');
+        }
+        
+        // Simulaciones----------------------------------------------------------
+        // Simulacion1-----------------------------------------------------------
+        function entradaSim1(){
+            animacionEntrada(sim1, 'default', 1, 1);
+            animacionEntrada(zona1_1, 'default', 1, 1);
+        }
+
+        sims.click(function(){
+            if(sims.css('cursor') == 'pointer'){
+                sims.css('cursor', 'default');
+                mal();   
+            }
+        });
+
+        zona1_1.click(function(){
+            animacionEntrada(paloma1_1, 'default', 1);
+            correcto(salidaSim1);
+        })
+
+        function salidaSim1(){
+            animacionSalida(sim1, 'default', 1);
+            animacionSalida(zona1_1, 'default', 1);
+            animacionSalida(paloma1_1, 'default', 1);
+            ingresaUsuario();
+        }
+
+        //Simulacion 2-----------------------------------------------------------
+        function ingresaUsuario(){
+            animacionEntrada(inst_sim2_1, 'default', 1);
+            animacionEntrada(sim2, 'default', 1);
+            animacionEntrada(inputUsuario, 'default', 1);
+        }
+
+        inputUsuario.on('input', function(){
+            if(inputUsuario.val() == 'Nombre_Apellido'){
+                audio[3].play();
+                animacionEntrada(paloma2_1, 'default', 1);
+                ingresaPass();
+            }
+        });
+        
+        function ingresaPass(){
+            animacionEntrada(inst_sim2_2, 'default', 1);
+            animacionEntrada(inputPass, 'default', 1);
+        }
+
+        inputPass.on('input', function(){
+            if(inputPass.val() == 'Didi879'){
+                audio[3].play();
+                animacionEntrada(paloma2_2, 'default', 1);
+                ingresaVerificacion();
+            }
+        });
+
+        function ingresaVerificacion(){
+            animacionEntrada(inst_sim2_3, 'default', 1);
+            animacionEntrada(zona2_1, 'default', 1);
+        }
+
+        zona2_1.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma2_3, 'default', 1);
+            ingresaCodigo();
+        });
+
+        function ingresaCodigo(){
+            animacionEntrada(inst_sim2_4, 'default', 1);
+            animacionEntrada(inputCodigo, 'default', 1);
+        }
+
+        inputCodigo.on('input', function(){
+            if(inputCodigo.val() == '357416'){
+                audio[3].play();
+                animacionEntrada(paloma2_4, 'default', 1);
+                clickLogin();
+            }
+        });
+
+        function clickLogin(){
+            animacionEntrada(inst_sim2_5, 'default', 1);
+            animacionEntrada(zona2_2, 'default', 1);
+        }
+
+        zona2_2.click(function(){
+            animacionEntrada(paloma2_5, 'default', 1);
+            correcto(salidaSim2);
+        });
+
+        function salidaSim2(){
+            animacionSalida(sim2, 'default', 1);
+            animacionSalida(zona2_1, 'default', 1);
+            animacionSalida(zona2_2, 'default', 1);
+            animacionSalida(inputUsuario, 'default', 1);
+            animacionSalida(inputPass, 'default', 1);
+            animacionSalida(inputCodigo, 'default', 1);
+            animacionSalida(paloma2_1, 'default', 1);
+            animacionSalida(paloma2_2, 'default', 1);
+            animacionSalida(paloma2_3, 'default', 1);
+            animacionSalida(paloma2_4, 'default', 1);
+            animacionSalida(paloma2_5, 'default', 1);
+            animacionSalida(inst_sim2_1, 'default', 1);
+            animacionSalida(inst_sim2_2, 'default', 1);
+            animacionSalida(inst_sim2_3, 'default', 1);
+            animacionSalida(inst_sim2_4, 'default', 1);
+            animacionSalida(inst_sim2_5, 'default', 1);
+            simulacion3();
+        }
+
+        // Simulacion 3------------------------------------------------------
+        function simulacion3(){
+            animacionEntrada(inst_sim3_1, 'default', 1);
+            animacionEntrada(sim3, 'default', 1);
+            animacionEntrada(zona3_1, 'default', 1);
+        }
+
+        zona3_1.click(function(){
+            animacionEntrada(paloma3_1, 'default', 1);
+            correcto(salidaSim3);
+        });
+
+        function salidaSim3(){
+            animacionSalida(sim3, 'default', 1);
+            animacionSalida(zona3_1, 'default', 1);
+            animacionSalida(paloma3_1, 'default', 1);
+            animacionSalida(inst_sim3_1, 'default', 1);
+            simulacion4();
+        }
+
+        // Simulacion 4----------------------------------------------------
+        function simulacion4(){
+            animacionEntrada(inst_sim4_1, 'default', 1);
+            animacionEntrada(sim4, 'default', 1);
+            animacionEntrada(zona4_1, 'default', 1);
+        }
+
+        zona4_1.click(function(){
+            animacionEntrada(paloma4_1, 'default', 1);
+            correcto(salidaSim4);
+        });
+
+        function salidaSim4(){
+            animacionSalida(sim4, 'default', 1);
+            animacionSalida(zona4_1, 'default', 1);
+            animacionSalida(paloma4_1, 'default', 1);
+            animacionSalida(inst_sim4_1, 'default', 1);
+            simulacion5();
+        }
+
+        // Simulacion 5----------------------------------------------------
+        function simulacion5(){
+            animacionEntrada(inst_sim5_1, 'default', 1);
+            animacionEntrada(sim5, 'default', 1);
+            animacionEntrada(zona5_1, 'default', 1);
+        }
+
+        zona5_1.click(function(){
+            animacionEntrada(paloma5_1, 'default', 1);
+            correcto(salidaSim5);
+        });
+
+        function salidaSim5(){
+            animacionSalida(sim5, 'default', 1);
+            animacionSalida(zona5_1, 'default', 1);
+            animacionSalida(paloma5_1, 'default', 1);
+            animacionSalida(inst_sim5_1, 'default', 1);
+            simulacion6();
+        }
+
+        // Simulacion 6-----------------------------------------------------
+        function simulacion6(){
+            animacionEntrada(inst_sim6_1, 'default', 1);
+            animacionEntrada(sim6, 'default', 1);
+            animacionEntrada(zona6_1, 'default', 1);
+        }
+
+        zona6_1.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma6_1, 'default', 1);
+            animacionEntrada(zona6_2, 'default', 1);
+            animacionEntrada(inst_sim6_2, 'default', 1);
+        });
+
+        zona6_2.click(function(){
+            animacionEntrada(paloma6_2, 'default', 1);
+            correcto(salidaSim6);
+        });
+
+        function salidaSim6(){
+            animacionSalida(sim6, 'default', 1);
+            animacionSalida(zona6_1, 'default', 1);
+            animacionSalida(zona6_2, 'default', 1);
+            animacionSalida(paloma6_1, 'default', 1);
+            animacionSalida(paloma6_2, 'default', 1);
+            animacionSalida(inst_sim6_1, 'default', 1);
+            animacionSalida(inst_sim6_2, 'default', 1);
+            simulacion7();
+        }
+
+        // Simulacion 7----------------------------------------------------
+        function simulacion7(){
+            animacionEntrada(inst_sim7_1, 'default', 1);
+            animacionEntrada(sim7, 'default', 1);
+            animacionEntrada(zona7_1, 'default', 1);
+        }
+
+        zona7_1.click(function(){
+            animacionEntrada(paloma7_1, 'default', 1);
+            correcto(salidaSim7);
+        });
+
+        function salidaSim7(){
+            animacionSalida(sim7, 'default', 1);
+            animacionSalida(zona7_1, 'default', 1);
+            animacionSalida(paloma7_1, 'default', 1);
+            animacionSalida(inst_sim7_1, 'default', 1);
+            simulacion8();
+        }
+
+        // Simulacion 8----------------------------------------------------
+        function simulacion8(){
+            animacionEntrada(inst_sim8_1, 'default', 1);
+            animacionEntrada(sim8, 'default', 1);
+            animacionEntrada(zona8_1, 'default', 1);
+        }
+
+        zona8_1.click(function(){
+            animacionEntrada(paloma8_1, 'default', 1);
+            correcto(salidaSim8);
+        });
+
+        function salidaSim8(){
+            animacionSalida(sim8, 'default', 1);
+            animacionSalida(zona8_1, 'default', 1);
+            animacionSalida(paloma8_1, 'default', 1);
+            animacionSalida(inst_sim8_1, 'default', 1);
+            simulacion9();
+        }
+
+        // Simulacion 9----------------------------------------------------
+        function simulacion9(){
+            animacionEntrada(inst_sim9_1, 'default', 1);
+            animacionEntrada(sim9, 'default', 1);
+            animacionEntrada(zona9_1, 'default', 1);
+        }
+
+        zona9_1.click(function(){
+            animacionEntrada(paloma9_1, 'default', 1);
+            correcto(salidaSim9);
+        });
+
+        function salidaSim9(){
+            animacionSalida(sim9, 'default', 1);
+            animacionSalida(zona9_1, 'default', 1);
+            animacionSalida(paloma9_1, 'default', 1);
+            animacionSalida(inst_sim9_1, 'default', 1);
+            simulacion10();
+        }
+
+        // Simulacion 10----------------------------------------------------
+        function simulacion10(){
+            animacionEntrada(inst_sim10_1, 'default', 1);
+            animacionEntrada(sim10, 'default', 1);
+            animacionEntrada(zona10_1, 'default', 1);
+            mensajeBien.css({
+                'top': '381px',
+                'left': '728px'
+            });
+            mensajeMal.css({
+                'top': '301px',
+                'left': '728px'
+            });
+        }
+
+        zona10_1.click(function(){
+            animacionEntrada(paloma10_1, 'default', 1);
+            correcto(salidaSim10)
+        });
+
+        function salidaSim10(){
+            animacionSalida(sim10, 'default', 1);
+            animacionSalida(zona10_1, 'default', 1);
+            animacionSalida(paloma10_1, 'default', 1);
+            animacionSalida(inst_sim10_1, 'default', 1);
+            simulacion11();
+        }
+
+        // Simulacion 11----------------------------------------------------
+        function simulacion11(){
+            animacionEntrada(inst_sim11_1, 'default', 1);
+            animacionEntrada(sim11, 'default', 1);
+            animacionEntrada(zona11_1, 'default', 1);
+            mensajeBien.css({
+                'top': '249px',
+                'left': '728px'
+            });
+            mensajeMal.css({
+                'top': '169px',
+                'left': '728px'
+            });
+        }
+
+        zona11_1.click(function(){
+            animacionEntrada(paloma11_1, 'default', 1);
+            correcto(salidaSim11);
+        });
+
+        function salidaSim11(){
+            animacionSalida(sim11, 'default', 1);
+            animacionSalida(zona11_1, 'default', 1);
+            animacionSalida(paloma11_1, 'default', 1);
+            animacionSalida(inst_sim11_1, 'default', 1);
+            simulacion12();
+        }
+
+        // Simulacion 12----------------------------------------------------
+        function simulacion12(){
+            animacionEntrada(inst_sim12_1, 'default', 1);
+            animacionEntrada(sim12, 'default', 1);
+            animacionEntrada(zona12_1, 'default', 1);
+        }
+
+        zona12_1.click(function(){
+            animacionEntrada(paloma12_1, 'default', 1);
+            correcto(salidaSim12);
+        });
+
+        function salidaSim12(){
+            animacionSalida(sim12, 'default', 1);
+            animacionSalida(zona12_1, 'default', 1);
+            animacionSalida(paloma12_1, 'default', 1);
+            animacionSalida(inst_sim12_1, 'default', 1);
+            simulacion13();
+        }
+
+        // Simulacion 13----------------------------------------------------
+        function simulacion13(){
+            animacionEntrada(inst_sim13_1, 'default', 1);
+            animacionEntrada(sim13, 'default', 1);
+            animacionEntrada(zona13_1, 'default', 1);
+            mensajeBien.css({
+                'top': '381px',
+                'left': '728px'
+            });
+            mensajeMal.css({
+                'top': '301px',
+                'left': '728px'
+            });
+        }
+
+        zona13_1.click(function(){
+            animacionEntrada(paloma13_1, 'default', 1);
+            correcto(salidaSim13);
+        });
+
+        function salidaSim13(){
+            animacionSalida(sim13, 'default', 1);
+            animacionSalida(zona13_1, 'default', 1);
+            animacionSalida(paloma13_1, 'default', 1);
+            animacionSalida(inst_sim13_1, 'default', 1);
+            simulacion14();
+        }
+
+        // Simulacion 14-----------------------------------------------------
+        function simulacion14(){
+            animacionEntrada(inst_sim14_1, 'default', 1);
+            animacionEntrada(sim14, 'default', 1);
+            animacionEntrada(inputRol, 'default', 1);
+            mensajeBien.css({
+                'top': '240px',
+                'left': '37px'
+            });
+            mensajeMal.css({
+                'top': '160px',
+                'left': '37px'
+            });
+        }
+
+        inputRol.on('input', function(){
+            if(inputRol.val() == '678'){
+                audio[3].play();
+                audio[3].play();
+                animacionEntrada(paloma14_1, 'default', 1);
+                animacionEntrada(zona14_2, 'default', 1);
+                animacionEntrada(inst_sim14_2, 'default', 1);
+            }
+        });
+
+        zona14_2.click(function(){
+            animacionEntrada(paloma14_2, 'default', 1);
+            correcto(salidaSim14);
+        });
+
+        function salidaSim14(){
+            animacionSalida(sim14, 'default', 1);
+            animacionSalida(inputRol, 'default', 1);
+            animacionSalida(zona14_2, 'default', 1);
+            animacionSalida(paloma14_1, 'default', 1);
+            animacionSalida(paloma14_2, 'default', 1);
+            animacionSalida(inst_sim14_1, 'default', 1);
+            animacionSalida(inst_sim14_2, 'default', 1);
+            simulacion15();
+        }
+
+        // Simulacion 15-----------------------------------------------------
+        function simulacion15(){
+            animacionEntrada(inst_sim15_1, 'default', 1);
+            animacionEntrada(sim15, 'default', 1);
+            animacionEntrada(zona15_1, 'default', 1);
+        }
+
+        zona15_1.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma15_1, 'default', 1);
+            animacionEntrada(zona15_2, 'default', 1);
+            animacionEntrada(inst_sim15_2, 'default', 1);
+        });
+
+        zona15_2.click(function(){
+            animacionEntrada(paloma15_2, 'default', 1);
+            correcto(salidaSim15);
+        });
+
+        function salidaSim15(){
+            animacionSalida(sim15, 'default', 1);
+            animacionSalida(zona15_1, 'default', 1);
+            animacionSalida(zona15_2, 'default', 1);
+            animacionSalida(paloma15_1, 'default', 1);
+            animacionSalida(paloma15_2, 'default', 1);
+            animacionSalida(inst_sim15_1, 'default', 1);
+            animacionSalida(inst_sim15_2, 'default', 1);
+            simulacion16();
+        }
+
+        // Simulacion 16-----------------------------------------------------
+        function simulacion16(){
+            animacionEntrada(inst_sim16_1, 'default', 1);
+            animacionEntrada(sim16, 'default', 1);
+            animacionEntrada(zona16_1, 'default', 1);
+            mensajeBien.css({
+                'top': '249px',
+                'left': '728px'
+            });
+            mensajeMal.css({
+                'top': '169px',
+                'left': '728px'
+            });
+        }
+
+        zona16_1.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma16_1, 'default', 1);
+            animacionEntrada(zona16_2, 'default', 1);
+            animacionEntrada(inst_sim16_2, 'default', 1);
+        });
+
+        zona16_2.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma16_2, 'default', 1);
+            animacionEntrada(zona16_3, 'default', 1);
+            animacionEntrada(inst_sim16_3, 'default', 1);
+        });
+
+        zona16_3.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma16_3, 'default', 1);
+            animacionEntrada(zona16_4, 'default', 1);
+            animacionEntrada(inst_sim16_4, 'default', 1);
+        });
+
+        zona16_4.click(function(){
+            animacionEntrada(paloma16_4, 'default', 1);
+            correcto(salidaSim16)
+        });
+
+        function salidaSim16(){
+            animacionSalida(sim16, 'default', 1);
+            animacionSalida(zona16_1, 'default', 1);
+            animacionSalida(zona16_2, 'default', 1);
+            animacionSalida(zona16_3, 'default', 1);
+            animacionSalida(zona16_4, 'default', 1);
+            animacionSalida(paloma16_1, 'default', 1);
+            animacionSalida(paloma16_2, 'default', 1);
+            animacionSalida(paloma16_3, 'default', 1);
+            animacionSalida(paloma16_4, 'default', 1);
+            animacionSalida(inst_sim16_1, 'default', 1);
+            animacionSalida(inst_sim16_2, 'default', 1);
+            animacionSalida(inst_sim16_3, 'default', 1);
+            animacionSalida(inst_sim16_4, 'default', 1);
+            simulacion17();
+        }
+
+        // Simulacion 17----------------------------------------------------
+        function simulacion17(){
+            animacionEntrada(inst_sim17_1, 'default', 1);
+            animacionEntrada(sim17, 'default', 1);
+            animacionEntrada(zona17_1, 'default', 1);
+        }
+
+        zona17_1.click(function(){
+            animacionEntrada(paloma17_1, 'default', 1);
+            correcto(salidaSim17);
+        });
+
+        function salidaSim17(){
+            animacionSalida(sim17, 'default', 1);
+            animacionSalida(zona17_1, 'default', 1);
+            animacionSalida(paloma17_1, 'default', 1);
+            animacionSalida(inst_sim17_1, 'default', 1);
+            simulacion18();
+        }
+        
+        // Simulacion 18-----------------------------------------------------
+        function simulacion18(){
+            animacionEntrada(inst_sim18_1, 'default', 1);
+            animacionEntrada(sim18, 'default', 1);
+            animacionEntrada(zona18_1, 'default', 1);
+        }
+
+        zona18_1.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma18_1, 'default', 1);
+            animacionEntrada(zona18_2, 'default', 1);
+            animacionEntrada(inst_sim18_2, 'default', 1);
+        });
+
+        zona18_2.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma18_2, 'default', 1);
+            animacionEntrada(zona18_3, 'default', 1);
+            animacionEntrada(inst_sim18_3, 'default', 1);
+        });
+
+        zona18_3.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma18_3, 'default', 1);
+            animacionEntrada(zona18_4, 'default', 1);
+            animacionEntrada(inst_sim18_4, 'default', 1);
+        });
+
+        zona18_4.click(function(){
+            animacionEntrada(paloma18_4, 'default', 1);
+            correcto(salidaSim18)
+        });
+
+        function salidaSim18(){
+            animacionSalida(sim18, 'default', 1);
+            animacionSalida(zona18_1, 'default', 1);
+            animacionSalida(zona18_2, 'default', 1);
+            animacionSalida(zona18_3, 'default', 1);
+            animacionSalida(zona18_4, 'default', 1);
+            animacionSalida(paloma18_1, 'default', 1);
+            animacionSalida(paloma18_2, 'default', 1);
+            animacionSalida(paloma18_3, 'default', 1);
+            animacionSalida(paloma18_4, 'default', 1);
+            animacionSalida(inst_sim18_1, 'default', 1);
+            animacionSalida(inst_sim18_2, 'default', 1);
+            animacionSalida(inst_sim18_3, 'default', 1);
+            animacionSalida(inst_sim18_4, 'default', 1);
+            simulacion19();
+        }
+        
+        // Simulacion 19----------------------------------------------------
+        function simulacion19(){
+            animacionEntrada(inst_sim19_1, 'default', 1);
+            animacionEntrada(sim19, 'default', 1);
+            animacionEntrada(zona19_1, 'default', 1);
+            mensajeBien.css({
+                'top': '381px',
+                'left': '728px'
+            });
+            mensajeMal.css({
+                'top': '301px',
+                'left': '728px'
+            });
+        }
+
+        zona19_1.click(function(){
+            animacionEntrada(paloma19_1, 'default', 1);
+            correcto(salidaSim19);
+        });
+
+        function salidaSim19(){
+            animacionSalida(sim19, 'default', 1);
+            animacionSalida(zona19_1, 'default', 1);
+            animacionSalida(paloma19_1, 'default', 1);
+            animacionSalida(inst_sim19_1, 'default', 1);
+            simulacion20();
+        }
+        
+        // Simulacion 19----------------------------------------------------
+        function simulacion20(){
+            animacionEntrada(inst_sim20_1, 'default', 1);
+            animacionEntrada(sim20, 'default', 1);
+            animacionEntrada(zona20_1, 'default', 1);
+        }
+
+        zona20_1.click(function(){
+            animacionEntrada(paloma20_1, 'default', 1);
+            correcto(salidaSim20);
+        });
+
+        function salidaSim20(){
+            animacionSalida(sim20, 'default', 1);
+            animacionSalida(zona20_1, 'default', 1);
+            animacionSalida(paloma20_1, 'default', 1);
+            animacionSalida(inst_sim20_1, 'default', 1);
+            simulacion21();
+        }
+        
+        // Simulacion 21-----------------------------------------------------
+        function simulacion21(){
+            animacionEntrada(inst_sim21_1, 'default', 1);
+            animacionEntrada(sim21, 'default', 1);
+            animacionEntrada(zona21_1, 'default', 1);
+        }
+
+        zona21_1.click(function(){
+            audio[3].play();
+            animacionEntrada(paloma21_1, 'default', 1);
+            animacionEntrada(zona21_2, 'default', 1);
+            animacionEntrada(inst_sim21_2, 'default', 1);
+        });
+
+        zona21_2.click(function(){
+            animacionEntrada(paloma21_2, 'default', 1);
+            correcto(salidaSim21);
+        });
+
+        function salidaSim21(){
+            animacionSalida(sim21, 'default', 1);
+            animacionSalida(zona21_1, 'default', 1);
+            animacionSalida(zona21_2, 'default', 1);
+            animacionSalida(paloma21_1, 'default', 1);
+            animacionSalida(paloma21_2, 'default', 1);
+            animacionSalida(inst_sim21_1, 'default', 1);
+            animacionSalida(inst_sim21_2, 'default', 1);
+            salidaSimulacion();
+        }
+
+        // Fin Simulacion----------------------------------------------------
+        function salidaSimulacion(){
+            aplicacion.reproducirAudio(audio[5], termina, 1);
+            animacionEntrada(finalSimulacion, 'default', 1);
+        }
+
+        function termina(){
+            animacionEntrada(mensajeSig, 'default', 1);
+            aplicacion.terminaPantalla();
+        }
 
     </script>
 </body>
