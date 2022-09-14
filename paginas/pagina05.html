@@ -24,6 +24,7 @@
 
     <img class="elementos" id="fondo" src="../img/pagina05/fondo.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="boton" src="../img/pagina05/boton.png" data-posX="328.98" data-posY="307.43"/>
+    <img class="elementos" id="instrucciones1" src="../img/pagina05/instrucciones1.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="instrucciones" src="../img/pagina05/instrucciones.png" data-posX="675.701" data-posY="445.023"/>
 
     <video class="elementos" id="video1" data-posX="0" data-posY="100"  autobuffer controls controlsList="nodownload nofullscreen">
@@ -40,6 +41,7 @@
         const boton = $('#boton');
         const video1 = $('#video1');
         const instrucciones = $('#instrucciones');
+        const instrucciones1 = $('#instrucciones1');
 
         video1.css({
             'width': '1020px',
@@ -49,7 +51,9 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3')
+            new Audio('../audios/gattaran_5.mp3'),
+            new Audio('../audios/gattaran_5.1.mp3'),
+            new Audio('../audios/gattaran_5.2.mp3'),
         ]
 
         // Al cargarse la página
@@ -59,8 +63,13 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], activarBoton, 1);
+            aplicacion.reproducirAudio(audio[0], terminaAudio01, 1);
+            aplicacion.activarBotonAdelante();
             animacionEntrada(fondo, 'default', 1, 1);
+        }
+        function terminaAudio01(){
+            aplicacion.reproducirAudio(audio[1], activarBoton, 1);
+            animacionEntrada(instrucciones1, 'default', 1, 1);
         }
 
         function activarBoton(){
@@ -76,8 +85,8 @@
                 setTimeout(()=>{
                     document.getElementById("video1").play();
                     video1.on("ended", function() {
+                        aplicacion.reproducirAudio(audio[2], 1);
                         animacionEntrada(instrucciones, 'default', 1, 1);
-                        aplicacion.terminaPantalla();
                     });
                 }, 1000);
             }
