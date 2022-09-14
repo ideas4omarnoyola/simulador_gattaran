@@ -22,9 +22,11 @@
 </head>
 <body class="pagina">
 
-    <img class="elementos" id="titulo" src="../img/pagina09/titulo.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="finalSimulacion" src="../img/pagina09/finalSimulacion.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="texto" src="../img/pagina09/texto.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="mensajeSig" src="../img/pagina09/mensajeSig.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="infografia" src="../img/pagina09/infografia.png" data-posX="502" data-posY="308"/>
+    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="672" data-posY="308"/>
+    <img class="elementos" id="tutorial" src="../img/pagina09/tutorial.png" data-posX="848" data-posY="308"/>
 
     
     <!-- Script de la página -->
@@ -32,14 +34,21 @@
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
-        const titulo = $('#titulo');
+        const texto = $('#texto');
         const mensajeSig = $('#mensajeSig');
-        const finalSimulacion = $('#finalSimulacion');
+        const infografia = $('#infografia');
+        const video = $('#video');
+        const tutorial = $('#tutorial');
+
+        infografia.css('cursor', 'pointer');
+        video.css('cursor', 'pointer');
+        tutorial.css('cursor', 'pointer');
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3')
+            new Audio('../audios/gattaran_9.mp3'),
+            new Audio('../audios/gattaran_9.1.mp3'),
+            new Audio('../audios/gattaran_9.2.mp3'),
         ]
 
         // Al cargarse la página
@@ -49,15 +58,33 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], finalCurso, 1);
-            animacionEntrada(titulo, 'default', 1, 1);
-            animacionEntrada(finalSimulacion, 'default', 1, 2);
+            aplicacion.reproducirAudio(audio[0], herramientas, 1);
+            animacionEntrada(texto, 'default', 1, 2);
         }
 
-        function finalCurso(){
-            aplicacion.reproducirAudio(audio[1], finalPantalla, 1);
-            animacionEntrada(mensajeSig, 'default', 1);
+        function herramientas(){
+            aplicacion.reproducirAudio(audio[1], avanzarPantalla, 1);
         }
+
+        function avanzarPantalla(){
+            aplicacion.reproducirAudio(audio[2], finalPantalla, 1);
+            animacionEntrada(mensajeSig, 'default', 1);
+            animacionEntrada(infografia, 'default', 1);
+            animacionEntrada(video, 'default', 1, .5);
+            animacionEntrada(tutorial, 'default', 1, 1);
+        }
+
+        infografia.click(function(){
+            aplicacion.irPagina(6);
+        });
+
+        video.click(function(){
+            aplicacion.irPagina(5);
+        });
+
+        tutorial.click(function(){
+            aplicacion.irPagina(7);
+        });
 
         function finalPantalla(){
             aplicacion.terminaPantalla();
