@@ -38,23 +38,26 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3')
+            new Audio('../audios/gattaran_3.mp3'),
+            new Audio('../audios/gattaran_3.1.mp3'),
         ]
 
         // Al cargarse la página
         $(window).on("load", function(){
             redimensionarElementos();
             aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], finalPagina, 1);
+            aplicacion.reproducirAudio(audio[0], terminaAudio01, 1);
             animacionEntrada(fondo, 'default', 1, 1);
+            aplicacion.activarBotonAdelante();
         }
 
-        function finalPagina(){
+        function terminaAudio01(){
+            aplicacion.reproducirAudio(audio[1], 1);
             animacionEntrada(instrucciones, 'default', 1, 1);
-            aplicacion.terminaPantalla();
         }
 
     </script>

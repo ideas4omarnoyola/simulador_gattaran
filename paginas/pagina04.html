@@ -48,12 +48,13 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/gattaran_4.mp3'),
+            new Audio('../audios/gattaran_4.1.mp3'),
+            new Audio('../audios/gattaran_4.2.mp3'),
+            new Audio('../audios/gattaran_4.3.mp3'),
+            new Audio('../audios/gattaran_4.4.mp3'),
+            new Audio('../audios/gattaran_4.5.mp3'),
+
         ]
 
         // Al cargarse la página
@@ -64,12 +65,13 @@
 
         function iniciarContenido(){
             aplicacion.reproducirAudio(audio[0], terminaAudio01, 1);
+            aplicacion.activarBotonAdelante();
             animacionEntrada(fondo, 'default', 1, 1);
+            animacionEntrada(esquema, 'default', 1, 1);
         }
 
         function terminaAudio01(){
             aplicacion.reproducirAudio(audio[1], terminaAudio02, 1);
-            animacionEntrada(esquema, 'default', 1, 1);
             animacionEntrada(info01, 'default', 1, 1);
         }
         function terminaAudio02(){
@@ -85,11 +87,8 @@
             animacionEntrada(info04, 'default', 1, 1);
         }
         function terminaAudio05(){
-            aplicacion.reproducirAudio(audio[5], finalPagina, 1);
+            aplicacion.reproducirAudio(audio[5], 1);
             animacionEntrada(info05, 'default', 1, 1);
-        }
-        function finalPagina(){
-            aplicacion.terminaPantalla();
         }
 
     </script>

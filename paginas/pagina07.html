@@ -43,8 +43,9 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/gattaran_7.mp3'),
+            new Audio('../audios/gattaran_7.1.mp3'),
+
         ]
 
         // Al cargarse la página
@@ -55,15 +56,15 @@
 
         function iniciarContenido(){
             aplicacion.reproducirAudio(audio[0], terminaAudio01, 1);
+            aplicacion.activarBotonAdelante();
             animacionEntrada(fondo, 'default', 1, 1);
+            animacionEntrada(info, 'izquierda-derecha', 1, 16);
         }
 
         function terminaAudio01(){
-            animacionEntrada(info, 'izquierda-derecha', 1, 1);
+            aplicacion.reproducirAudio(audio[1], 1);
             animacionEntrada(instrucciones, 'izquierda-derecha', 1, 3);
         }
-
-     
 
     </script>
 </body>
