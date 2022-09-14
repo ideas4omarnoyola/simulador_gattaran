@@ -202,7 +202,7 @@
         const zonas = $('.zonas');
         zonas.css({
             'cursor': 'pointer',
-            'background': 'red'
+            'background': '#81000080'
         });
 
         const sim1 = $('#sim1');
@@ -314,7 +314,6 @@
         inputRol.css({
             'width': '300px',
             'height': '30px',
-            'border': 'none'
         });
 
         const sim15 = $('#sim15');
@@ -400,7 +399,7 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/gattaran_10.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3'),
         ]
@@ -1246,8 +1245,6 @@
                 if(promedio >= 60){
                     retroC();
                 }
-
-                aplicacion.guardarCalificacion(promedio);
             }
             else{
                 aplicacion.siguienteIntento();
@@ -1256,6 +1253,8 @@
                     animacionEntrada(reintentar, 'default', 1);
                 }
             }
+            
+            aplicacion.guardarCalificacion(promedio);
         }
 
         function retroA(){

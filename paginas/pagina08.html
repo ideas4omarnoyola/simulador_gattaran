@@ -231,7 +231,7 @@
         const zonas = $('.zonas');
         zonas.css({
             'cursor': 'pointer',
-            'background': 'red'
+            'background': '#81000080'
         });
         
         const sims = $('.sims');
@@ -364,8 +364,7 @@
 
         inputRol.css({
             'width': '300px',
-            'height': '30px',
-            'border': 'none'
+            'height': '30px'
         });
         
         const sim15 = $('#sim15');
@@ -451,13 +450,14 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/gattaran_8.mp3'),
+            new Audio('../audios/gattaran_8.1.1.mp3'),
             new Audio('../audios/audio0.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3'),
             new Audio('../audios/ovacion.mp3'),
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/gattaran_ovacion.mp3'),
+            new Audio('../audios/gattaran_8.1.mp3'),
         ]
 
         // Al cargarse la página
@@ -1180,12 +1180,16 @@
         }
 
         function felicitacion(){
-            aplicacion.reproducirAudio(audio[6], finalPantalla, 1);
+            aplicacion.reproducirAudio(audio[6], avanzarPantalla, 1);
             animacionSalida(confeti, 'default', 1);
         }
 
-        function finalPantalla(){
+        function avanzarPantalla(){
+            aplicacion.reproducirAudio(audio[7], finalPantalla, 1, 1);
             animacionEntrada(avanzar, 'default', 1);
+        }
+
+        function finalPantalla(){
             aplicacion.terminaPantalla();
         }
 
