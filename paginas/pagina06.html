@@ -23,6 +23,10 @@
 <body class="pagina">
 
     <img class="elementos" id="fondo" src="../img/pagina06/fondo.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="instrucciones" src="../img/pagina06/instrucciones.png" data-posX="675.701" data-posY="445.023"/>
+    <a href="../infografia/CRM Farming Portifolio.pdf" target="_blank" class="elementos" id="boton" data-posX="184.745" data-posY="413.067">
+        <img src="../img/pagina06/boton.png" />
+    </a>
 
     
     <!-- Script de la página -->
@@ -30,8 +34,9 @@
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
-
         const fondo = $('#fondo');
+        const boton = $('#boton');
+        const instrucciones = $('#instrucciones');
 
 
         // Audios------------------------------------------------------
@@ -46,13 +51,21 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], finalPagina, 1);
+            aplicacion.reproducirAudio(audio[0], activarBoton, 1);
             animacionEntrada(fondo, 'default', 1, 1);
         }
 
-        function finalPagina(){
-            aplicacion.terminaPantalla();
+        function activarBoton(){
+            parpadear(boton);
         }
+
+        boton.click(function(){
+            if(boton.css('cursor') == 'pointer'){
+                dejarParpadear(boton);
+                animacionEntrada(instrucciones, 'default', 1, 1);
+                aplicacion.terminaPantalla();
+            }
+        });
 
     </script>
 </body>
