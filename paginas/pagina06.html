@@ -24,7 +24,6 @@
 
     <img class="elementos" id="fondo" src="../img/pagina06/fondo.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="instruccion1" src="../img/pagina06/instruccion1.png" data-posX="236.79" data-posY="302.49"/>
-    <img class="elementos" id="instrucciones" src="../img/pagina06/instrucciones.png" data-posX="675.701" data-posY="445.023"/>
     <a href="../infografia/gatarran.pdf" target="_blank" class="elementos" id="boton" data-posX="184.745" data-posY="413.067">
         <img src="../img/pagina06/boton.png" />
     </a>
@@ -45,7 +44,6 @@
         const audio = [
             new Audio('../audios/gattaran_6.mp3'),
             new Audio('../audios/gattaran_6.1.mp3'),
-            new Audio('../audios/gattaran_6.2.mp3'),
         ]
 
         // Al cargarse la página
@@ -71,10 +69,6 @@
         boton.click(function(){
             if(boton.css('cursor') == 'pointer'){
                 dejarParpadear(boton);
-                setTimeout(() => {
-                    aplicacion.reproducirAudio(audio[2], 1);
-                    animacionEntrada(instrucciones, 'default', 1, 1);
-                }, 3000);
             }
         });
 
