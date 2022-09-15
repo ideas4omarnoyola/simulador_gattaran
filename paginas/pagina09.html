@@ -24,9 +24,9 @@
 
     <img class="elementos" id="texto" src="../img/pagina09/texto.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="mensajeSig" src="../img/pagina09/mensajeSig.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="infografia" src="../img/pagina09/infografia.png" data-posX="502" data-posY="308"/>
-    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="672" data-posY="308"/>
-    <img class="elementos" id="tutorial" src="../img/pagina09/tutorial.png" data-posX="848" data-posY="308"/>
+    <img class="elementos" id="infografia" src="../img/pagina09/infografia.png" data-posX="51" data-posY="306"/>
+    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="266" data-posY="306"/>
+    <img class="elementos" id="tutorial" src="../img/pagina09/tutorial.png" data-posX="158" data-posY="409"/>
 
     
     <!-- Script de la página -->
@@ -68,7 +68,6 @@
 
         function avanzarPantalla(){
             aplicacion.reproducirAudio(audio[2], finalPantalla, 1);
-            animacionEntrada(mensajeSig, 'default', 1);
             animacionEntrada(infografia, 'default', 1);
             animacionEntrada(video, 'default', 1, .5);
             animacionEntrada(tutorial, 'default', 1, 1);
