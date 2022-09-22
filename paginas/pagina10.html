@@ -435,11 +435,12 @@
         zona21_1.css({'width': '105px', 'height': '18px'});
         zona21_2.css({'width': '165px', 'height': '22px'});
 
+        const sims = $('.sims');
+
         botonInstrucciones.css('cursor', 'pointer');
         cerrarInstrucciones.css('cursor', 'pointer');
         sims.css('cursor', 'pointer');
-        reiniciar.css('cursor', 'pointer');
-        reintentar.css('cursor', 'pointer');
+        
 
         const avanzado = $('#avanzado');
         const intermedio = $('#intermedio');
@@ -448,6 +449,9 @@
         const reintentar = $('#reintentar');
         const reiniciar = $('#reiniciar');
         const calificacion = $('#calificacion');
+
+        reiniciar.css('cursor', 'pointer');
+        reintentar.css('cursor', 'pointer');
 
         let zonaPantalla2 = 1;
         let zonaPantalla6 = 1;
