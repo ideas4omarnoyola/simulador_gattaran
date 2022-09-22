@@ -24,6 +24,7 @@
 
     <img class="elementos" id="fondo" src="../img/pagina07/fondo.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="info" src="../img/pagina07/info.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="instrucciones" src="../img/pagina07/instrucciones.png" data-posX="0" data-posY="0"/>
    
     
     <!-- Script de la página -->
@@ -34,10 +35,12 @@
 
         const fondo = $('#fondo');
         const info = $('#info');
+        const instrucciones = $('#instrucciones');
 
         // Audios------------------------------------------------------
         const audio = [
             new Audio('../audios/gattaran_7.mp3'),
+            new Audio('../audios/gattaran_7.1.mp3'),
         ]
 
         // Al cargarse la página
@@ -47,10 +50,15 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], 1);
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, 1);
             aplicacion.activarBotonAdelante();
             animacionEntrada(fondo, 'default', 1, 1);
             animacionEntrada(info, 'izquierda-derecha', 1, 16);
+        }
+
+        function terminaAudio1(){
+            aplicacion.reproducirAudio(audio[1], 1);
+            animacionEntrada(instrucciones, 'default', 1);
         }
 
     </script>
