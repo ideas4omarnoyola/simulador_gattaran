@@ -8,6 +8,7 @@ let totalPaginas;
 let paginasVistas = 0;
 let calificacionFinal = 0;
 let intentos = 1;
+let noEmpleado;
 
 // Iniciar App
 function iniciarAplicacion(){
@@ -230,4 +231,12 @@ function verIntento(){
 
 function reiniciarInntentos(){
     intentos = 1;
+}
+
+function agregarNoEmpleado(numero){
+    noEmpleado = numero;
+}
+
+function verNoEmpleado(){
+    return noEmpleado;
 }

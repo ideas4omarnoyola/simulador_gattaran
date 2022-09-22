@@ -204,7 +204,8 @@
     <img class="elementos sims" id="intermedio" src="../img/pagina10/intermedio.png" data-posX="0" data-posY="0"/>
     <img class="elementos sims" id="basico" src="../img/pagina10/basico.png" data-posX="0" data-posY="0"/>
     <img class="elementos sims" id="retroMala" src="../img/pagina10/retroMala.png" data-posX="0" data-posY="0"/>
-    <img class="elementos sims" id="reintentar" src="../img/pagina10/reintentar.png" data-posX="397" data-posY="474"/>
+    <img class="elementos sims" id="reintentar" src="../img/pagina10/reintentar.png" data-posX="490" data-posY="385"/>
+    <img class="elementos sims" id="reiniciar" src="../img/pagina10/reiniciar.png" data-posX="200" data-posY="385"/>
     <div class="elementos" id="calificacion"></div>
     
     <!-- Boton de instrucciones -->
@@ -226,7 +227,7 @@
         const zonas = $('.zonas');
         zonas.css({
             'cursor': 'pointer',
-            'background': '#59D80080'
+            'background': 'transparent'
         });
 
         const sim1 = $('#sim1');
@@ -436,12 +437,16 @@
 
         botonInstrucciones.css('cursor', 'pointer');
         cerrarInstrucciones.css('cursor', 'pointer');
+        sims.css('cursor', 'pointer');
+        reiniciar.css('cursor', 'pointer');
+        reintentar.css('cursor', 'pointer');
 
         const avanzado = $('#avanzado');
         const intermedio = $('#intermedio');
         const basico = $('#basico');
         const retroMala = $('#retroMala');
         const reintentar = $('#reintentar');
+        const reiniciar = $('#reiniciar');
         const calificacion = $('#calificacion');
 
         let zonaPantalla2 = 1;
@@ -472,9 +477,12 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], activarBoton, 1);
+            // aplicacion.reproducirAudio(audio[0], activarBoton, 1);
             animacionEntrada(titulo, 'default', 1, 1);
             animacionEntrada(instrucciones, 'default', 1, 1);
+            setTimeout(()=>{
+                activarBoton();
+            }, 1000);
         }
 
         function activarBoton(){
@@ -524,17 +532,17 @@
         })
 
         function salidaSim1(){
-            animacionSalida(sim1, 'default', 1, 1);
+            animacionSalida(sim1, 'default', 1, 3);
             animacionSalida(zona1_1, 'default', .1);
-            animacionSalida(paloma1_1, 'default', 1, 1);
-            animacionSalida(tache1_1, 'default', 1, 1);
+            animacionSalida(paloma1_1, 'default', 1, 3);
+            animacionSalida(tache1_1, 'default', 1, 3);
             ingresaUsuario();
         }
 
         //Simulacion 2-----------------------------------------------------------
         function ingresaUsuario(){
-            animacionEntrada(sim2, 'default', 1, 1);
-            animacionEntrada(inputUsuario, 'default', 1, 1);
+            animacionEntrada(sim2, 'default', 1, 3);
+            animacionEntrada(inputUsuario, 'default', 1, 3);
         }
 
         sim2.click(function(){
@@ -632,27 +640,27 @@
         });
 
         function salidaSim2(){
-            animacionSalida(sim2, 'default', 1, 1);
+            animacionSalida(sim2, 'default', 1, 3);
             animacionSalida(inputUsuario, 'default', 1, 1);
             animacionSalida(inputPass, 'default', 1, 1);
             animacionSalida(inputCodigo, 'default', 1, 1);
-            animacionSalida(paloma2_1, 'default', 1, 1);
-            animacionSalida(paloma2_2, 'default', 1, 1);
-            animacionSalida(paloma2_3, 'default', 1, 1);
-            animacionSalida(paloma2_4, 'default', 1, 1);
-            animacionSalida(paloma2_5, 'default', 1, 1);
-            animacionSalida(tache2_1, 'default', 1, 1);
-            animacionSalida(tache2_2, 'default', 1, 1);
-            animacionSalida(tache2_3, 'default', 1, 1);
-            animacionSalida(tache2_4, 'default', 1, 1);
-            animacionSalida(tache2_5, 'default', 1, 1);
+            animacionSalida(paloma2_1, 'default', 1, 3);
+            animacionSalida(paloma2_2, 'default', 1, 3);
+            animacionSalida(paloma2_3, 'default', 1, 3);
+            animacionSalida(paloma2_4, 'default', 1, 3);
+            animacionSalida(paloma2_5, 'default', 1, 3);
+            animacionSalida(tache2_1, 'default', 1, 3);
+            animacionSalida(tache2_2, 'default', 1, 3);
+            animacionSalida(tache2_3, 'default', 1, 3);
+            animacionSalida(tache2_4, 'default', 1, 3);
+            animacionSalida(tache2_5, 'default', 1, 3);
             simulacion3();
         }
 
         // Simulacion 3------------------------------------------------------
         function simulacion3(){
-            animacionEntrada(sim3, 'default', 1, 1);
-            animacionEntrada(zona3_1, 'default', 1, 1);
+            animacionEntrada(sim3, 'default', 1, 3);
+            animacionEntrada(zona3_1, 'default', 1, 3);
         }
 
         sim3.click(function(){
@@ -669,17 +677,17 @@
         });
 
         function salidaSim3(){
-            animacionSalida(sim3, 'default', 1, 1);
+            animacionSalida(sim3, 'default', 1, 3);
             animacionSalida(zona3_1, 'default', .1);
-            animacionSalida(paloma3_1, 'default', 1, 1);
-            animacionSalida(tache3_1, 'default', 1, 1);
+            animacionSalida(paloma3_1, 'default', 1, 3);
+            animacionSalida(tache3_1, 'default', 1, 3);
             simulacion4();
         }
 
         // Simulacion 4------------------------------------------------------
         function simulacion4(){
-            animacionEntrada(sim4, 'default', 1, 1);
-            animacionEntrada(zona4_1, 'default', 1, 1);
+            animacionEntrada(sim4, 'default', 1, 3);
+            animacionEntrada(zona4_1, 'default', 1, 3);
         }
 
         sim4.click(function(){
@@ -696,17 +704,17 @@
         });
 
         function salidaSim4(){
-            animacionSalida(sim4, 'default', 1, 1);
+            animacionSalida(sim4, 'default', 1, 3);
             animacionSalida(zona4_1, 'default', .1);
-            animacionSalida(paloma4_1, 'default', 1, 1);
-            animacionSalida(tache4_1, 'default', 1, 1);
+            animacionSalida(paloma4_1, 'default', 1, 3);
+            animacionSalida(tache4_1, 'default', 1, 3);
             simulacion5();
         }
 
         // Simulacion 5------------------------------------------------------
         function simulacion5(){
-            animacionEntrada(sim5, 'default', 1, 1);
-            animacionEntrada(zona5_1, 'default', 1, 1);
+            animacionEntrada(sim5, 'default', 1, 3);
+            animacionEntrada(zona5_1, 'default', 1, 3);
         }
 
         sim5.click(function(){
@@ -723,17 +731,17 @@
         });
 
         function salidaSim5(){
-            animacionSalida(sim5, 'default', 1, 1);
+            animacionSalida(sim5, 'default', 1, 3);
             animacionSalida(zona5_1, 'default', .1);
-            animacionSalida(paloma5_1, 'default', 1, 1);
-            animacionSalida(tache5_1, 'default', 1, 1);
+            animacionSalida(paloma5_1, 'default', 1, 3);
+            animacionSalida(tache5_1, 'default', 1, 3);
             simulacion6();
         }
 
         // Simulacion 6-----------------------------------------------------
         function simulacion6(){
-            animacionEntrada(sim6, 'default', 1, 1);
-            animacionEntrada(zona6_1, 'default', 1, 1);
+            animacionEntrada(sim6, 'default', 1, 3);
+            animacionEntrada(zona6_1, 'default', 1, 3);
         }
         
 
@@ -756,6 +764,7 @@
         zona6_1.click(function(){
             audio[1].play();
             animacionSalida(zona6_1, 'default', .1);
+            zonaPantalla6++;
             aciertos++;
             animacionEntrada(paloma6_1, 'default', 1);
             animacionEntrada(zona6_2, 'default', 1);
@@ -764,24 +773,25 @@
         zona6_2.click(function(){
             audio[1].play();
             animacionSalida(zona6_2, 'default', .1);
+            zonaPantalla6++;
             aciertos++;
             animacionEntrada(paloma6_2, 'default', 1);
             salidaSim6();
         });
 
         function salidaSim6(){
-            animacionSalida(sim6, 'default', 1, 1);
-            animacionSalida(paloma6_1, 'default', 1, 1);
-            animacionSalida(paloma6_2, 'default', 1, 1);
-            animacionSalida(tache6_1, 'default', 1, 1);
-            animacionSalida(tache6_2, 'default', 1, 1);
+            animacionSalida(sim6, 'default', 1, 3);
+            animacionSalida(paloma6_1, 'default', 1, 3);
+            animacionSalida(paloma6_2, 'default', 1, 3);
+            animacionSalida(tache6_1, 'default', 1, 3);
+            animacionSalida(tache6_2, 'default', 1, 3);
             simulacion7();
         }
 
         // Simulacion 7------------------------------------------------------
         function simulacion7(){
-            animacionEntrada(sim7, 'default', 1, 1);
-            animacionEntrada(zona7_1, 'default', 1, 1);
+            animacionEntrada(sim7, 'default', 1, 3);
+            animacionEntrada(zona7_1, 'default', 1, 3);
         }
 
         sim7.click(function(){
@@ -798,17 +808,17 @@
         });
 
         function salidaSim7(){
-            animacionSalida(sim7, 'default', 1, 1);
+            animacionSalida(sim7, 'default', 1, 3);
             animacionSalida(zona7_1, 'default', .1);
-            animacionSalida(paloma7_1, 'default', 1, 1);
-            animacionSalida(tache7_1, 'default', 1, 1);
+            animacionSalida(paloma7_1, 'default', 1, 3);
+            animacionSalida(tache7_1, 'default', 1, 3);
             simulacion8();
         }
 
         // Simulacion 8------------------------------------------------------
         function simulacion8(){
-            animacionEntrada(sim8, 'default', 1, 1);
-            animacionEntrada(zona8_1, 'default', 1, 1);
+            animacionEntrada(sim8, 'default', 1, 3);
+            animacionEntrada(zona8_1, 'default', 1, 3);
         }
 
         sim8.click(function(){
@@ -825,17 +835,17 @@
         });
 
         function salidaSim8(){
-            animacionSalida(sim8, 'default', 1, 1);
-            animacionSalida(zona8_1, 'default', 1, 1);
-            animacionSalida(paloma8_1, 'default', 1, 1);
-            animacionSalida(tache8_1, 'default', 1);
+            animacionSalida(sim8, 'default', 1, 3);
+            animacionSalida(zona8_1, 'default', 1, .1);
+            animacionSalida(paloma8_1, 'default', 1, 3);
+            animacionSalida(tache8_1, 'default', 3);
             simulacion9();
         }
         
         // Simulacion 9------------------------------------------------------
         function simulacion9(){
-            animacionEntrada(sim9, 'default', 1, 1);
-            animacionEntrada(zona9_1, 'default', 1, 1);
+            animacionEntrada(sim9, 'default', 1, 3);
+            animacionEntrada(zona9_1, 'default', 1, 3);
         }
 
         sim9.click(function(){
@@ -852,17 +862,17 @@
         });
 
         function salidaSim9(){
-            animacionSalida(sim9, 'default', 1, 1);
+            animacionSalida(sim9, 'default', 1, 3);
             animacionSalida(zona9_1, 'default', .1);
-            animacionSalida(paloma9_1, 'default', 1, 1);
-            animacionSalida(tache9_1, 'default', 1, 1);
+            animacionSalida(paloma9_1, 'default', 1, 3);
+            animacionSalida(tache9_1, 'default', 1, 3);
             simulacion10();
         }
         
         // Simulacion 10------------------------------------------------------
         function simulacion10(){
-            animacionEntrada(sim10, 'default', 1, 1);
-            animacionEntrada(zona10_1, 'default', 1, 1);
+            animacionEntrada(sim10, 'default', 1, 3);
+            animacionEntrada(zona10_1, 'default', 1, 3);
         }
 
         sim10.click(function(){
@@ -879,17 +889,17 @@
         });
 
         function salidaSim10(){
-            animacionSalida(sim10, 'default', 1, 1);
+            animacionSalida(sim10, 'default', 1, 3);
             animacionSalida(zona10_1, 'default', .1);
-            animacionSalida(paloma10_1, 'default', 1, 1);
-            animacionSalida(tache10_1, 'default', 1, 1);
+            animacionSalida(paloma10_1, 'default', 1, 3);
+            animacionSalida(tache10_1, 'default', 1, 3);
             simulacion11();
         }
         
         // Simulacion 11------------------------------------------------------
         function simulacion11(){
-            animacionEntrada(sim11, 'default', 1, 1);
-            animacionEntrada(zona11_1, 'default', 1, 1);
+            animacionEntrada(sim11, 'default', 1, 3);
+            animacionEntrada(zona11_1, 'default', 1, 3);
         }
 
         sim11.click(function(){
@@ -906,17 +916,17 @@
         });
 
         function salidaSim11(){
-            animacionSalida(sim11, 'default', 1, 1);
+            animacionSalida(sim11, 'default', 1, 3);
             animacionSalida(zona11_1, 'default', .1);
-            animacionSalida(paloma11_1, 'default', 1, 1);
-            animacionSalida(tache11_1, 'default', 1, 1);
+            animacionSalida(paloma11_1, 'default', 1, 3);
+            animacionSalida(tache11_1, 'default', 1, 3);
             simulacion12();
         }
         
         // Simulacion 12------------------------------------------------------
         function simulacion12(){
-            animacionEntrada(sim12, 'default', 1, 1);
-            animacionEntrada(zona12_1, 'default', 1, 1);
+            animacionEntrada(sim12, 'default', 1, 3);
+            animacionEntrada(zona12_1, 'default', 1, 3);
         }
 
         sim12.click(function(){
@@ -933,17 +943,17 @@
         });
 
         function salidaSim12(){
-            animacionSalida(sim12, 'default', 1, 1);
+            animacionSalida(sim12, 'default', 1, 3);
             animacionSalida(zona12_1, 'default', .1);
-            animacionSalida(paloma12_1, 'default', 1, 1);
-            animacionSalida(tache12_1, 'default', 1, 1);
+            animacionSalida(paloma12_1, 'default', 1, 3);
+            animacionSalida(tache12_1, 'default', 1, 3);
             simulacion13();
         }
         
         // Simulacion 13------------------------------------------------------
         function simulacion13(){
-            animacionEntrada(sim13, 'default', 1, 1);
-            animacionEntrada(zona13_1, 'default', 1, 1);
+            animacionEntrada(sim13, 'default', 1, 3);
+            animacionEntrada(zona13_1, 'default', 1, 3);
         }
 
         sim13.click(function(){
@@ -960,17 +970,17 @@
         });
 
         function salidaSim13(){
-            animacionSalida(sim13, 'default', 1, 1);
+            animacionSalida(sim13, 'default', 1, 3);
             animacionSalida(zona13_1, 'default', .1);
-            animacionSalida(paloma13_1, 'default', 1, 1);
-            animacionSalida(tache13_1, 'default', 1, 1);
+            animacionSalida(paloma13_1, 'default', 1, 3);
+            animacionSalida(tache13_1, 'default', 1, 3);
             simulacion14();
         }
 
         // Simulacion 14-----------------------------------------------------
         function simulacion14(){
-            animacionEntrada(sim14, 'default', 1, 1);
-            animacionEntrada(inputRol, 'default', 1, 1);
+            animacionEntrada(sim14, 'default', 1, 3);
+            animacionEntrada(inputRol, 'default', 1, 3);
         }
         
         sim14.click(function(){
@@ -993,6 +1003,7 @@
             if(inputRol.val() == '678'){
                 audio[1].play();
                 inputRol.prop('disabled', true);
+                zonaPantalla14++;
                 aciertos++;
                 animacionEntrada(paloma14_1, 'default', 1);
                 animacionEntrada(zona14_2, 'default', 1);
@@ -1001,26 +1012,27 @@
 
         zona14_2.click(function(){
             audio[1].play();
+            zonaPantalla14++;
             aciertos++;
             animacionEntrada(paloma14_2, 'default', 1);
             salidaSim14();
         });
 
         function salidaSim14(){
-            animacionSalida(sim14, 'default', 1, 1);
+            animacionSalida(sim14, 'default', 1, 3);
             animacionSalida(zona14_2, 'default', .1);
             animacionSalida(inputRol, 'default', 1, 1);
-            animacionSalida(paloma14_1, 'default', 1, 1);
-            animacionSalida(paloma14_2, 'default', 1, 1);
-            animacionSalida(tache14_1, 'default', 1, 1);
-            animacionSalida(tache14_2, 'default', 1, 1);
+            animacionSalida(paloma14_1, 'default', 1, 3);
+            animacionSalida(paloma14_2, 'default', 1, 3);
+            animacionSalida(tache14_1, 'default', 1, 3);
+            animacionSalida(tache14_2, 'default', 1, 3);
             simulacion15();
         }
 
         // Simulacion 15-----------------------------------------------------
         function simulacion15(){
-            animacionEntrada(sim15, 'default', 1, 1);
-            animacionEntrada(zona15_1, 'default', 1, 1);
+            animacionEntrada(sim15, 'default', 1, 3);
+            animacionEntrada(zona15_1, 'default', 1, 3);
         }
         
 
@@ -1043,6 +1055,7 @@
         zona15_1.click(function(){
             audio[1].play();
             animacionSalida(zona15_1, 'default', .1);
+            zonaPantalla15++;
             aciertos++;
             animacionEntrada(paloma15_1, 'default', 1);
             animacionEntrada(zona15_2, 'default', 1);
@@ -1051,24 +1064,25 @@
         zona15_2.click(function(){
             audio[1].play();
             animacionSalida(zona15_2, 'default', .1);
+            zonaPantalla15++;
             aciertos++;
             animacionEntrada(paloma15_2, 'default', 1);
             salidaSim15();
         });
 
         function salidaSim15(){
-            animacionSalida(sim15, 'default', 1, 1);
-            animacionSalida(paloma15_1, 'default', 1, 1);
-            animacionSalida(paloma15_2, 'default', 1, 1);
-            animacionSalida(tache15_1, 'default', 1, 1);
-            animacionSalida(tache15_2, 'default', 1, 1);
+            animacionSalida(sim15, 'default', 1, 3);
+            animacionSalida(paloma15_1, 'default', 1, 3);
+            animacionSalida(paloma15_2, 'default', 1, 3);
+            animacionSalida(tache15_1, 'default', 1, 3);
+            animacionSalida(tache15_2, 'default', 1, 3);
             simulacion16();
         }
 
         // Simulacion 16-----------------------------------------------------
         function simulacion16(){
-            animacionEntrada(sim16, 'default', 1, 1);
-            animacionEntrada(zona16_1, 'default', 1, 1);
+            animacionEntrada(sim16, 'default', 1, 3);
+            animacionEntrada(zona16_1, 'default', 1, 3);
         }
         
 
@@ -1100,6 +1114,7 @@
 
         zona16_1.click(function(){
             audio[1].play();
+            zonaPantalla16++;
             aciertos++;
             animacionSalida(zona16_1, 'default', .1);
             animacionEntrada(paloma16_1, 'default', 1);
@@ -1109,6 +1124,7 @@
         zona16_2.click(function(){
             audio[1].play();
             animacionSalida(zona16_2, 'default', .1);
+            zonaPantalla16++;
             aciertos++;
             animacionEntrada(paloma16_2, 'default', 1);
             animacionEntrada(zona16_3, 'default', 1);
@@ -1117,6 +1133,7 @@
         zona16_3.click(function(){
             audio[1].play();
             animacionSalida(zona16_3, 'default', .1);
+            zonaPantalla16++;
             aciertos++;
             animacionEntrada(paloma16_3, 'default', 1);
             animacionEntrada(zona16_4, 'default', 1);
@@ -1125,28 +1142,29 @@
         zona16_4.click(function(){
             audio[1].play();
             animacionSalida(zona16_4, 'default', .1);
+            zonaPantalla16++;
             aciertos++;
             animacionEntrada(paloma16_4, 'default', 1);
             salidaSim16();
         });
 
         function salidaSim16(){
-            animacionSalida(sim16, 'default', 1, 1);
-            animacionSalida(paloma16_1, 'default', 1, 1);
-            animacionSalida(paloma16_2, 'default', 1, 1);
-            animacionSalida(paloma16_3, 'default', 1, 1);
-            animacionSalida(paloma16_4, 'default', 1, 1);
-            animacionSalida(tache16_1, 'default', 1, 1);
-            animacionSalida(tache16_2, 'default', 1, 1);
-            animacionSalida(tache16_3, 'default', 1, 1);
-            animacionSalida(tache16_4, 'default', 1, 1);
+            animacionSalida(sim16, 'default', 1, 3);
+            animacionSalida(paloma16_1, 'default', 1, 3);
+            animacionSalida(paloma16_2, 'default', 1, 3);
+            animacionSalida(paloma16_3, 'default', 1, 3);
+            animacionSalida(paloma16_4, 'default', 1, 3);
+            animacionSalida(tache16_1, 'default', 1, 3);
+            animacionSalida(tache16_2, 'default', 1, 3);
+            animacionSalida(tache16_3, 'default', 1, 3);
+            animacionSalida(tache16_4, 'default', 1, 3);
             simulacion17();
         }
 
         // Simulacion 17------------------------------------------------------
         function simulacion17(){
-            animacionEntrada(sim17, 'default', 1, 1);
-            animacionEntrada(zona17_1, 'default', 1, 1);
+            animacionEntrada(sim17, 'default', 1, 3);
+            animacionEntrada(zona17_1, 'default', 1, 3);
         }
 
         sim17.click(function(){
@@ -1163,10 +1181,10 @@
         });
 
         function salidaSim17(){
-            animacionSalida(sim17, 'default', 1, 1);
+            animacionSalida(sim17, 'default', 1, 3);
             animacionSalida(zona17_1, 'default', .1);
-            animacionSalida(paloma17_1, 'default', 1, 1);
-            animacionSalida(tache17_1, 'default', 1, 1);
+            animacionSalida(paloma17_1, 'default', 1, 3);
+            animacionSalida(tache17_1, 'default', 1, 3);
             simulacion18();
         }
 
@@ -1206,6 +1224,7 @@
         zona18_1.click(function(){
             audio[1].play();
             animacionSalida(zona18_1, 'default', .1);
+            zonaPantalla18++;
             aciertos++;
             animacionEntrada(paloma18_1, 'default', 1);
             animacionEntrada(zona18_2, 'default', 1);
@@ -1214,6 +1233,7 @@
         zona18_2.click(function(){
             audio[1].play();
             animacionSalida(zona18_2, 'default', .1);
+            zonaPantalla18++;
             aciertos++;
             animacionEntrada(paloma18_2, 'default', 1);
             animacionEntrada(zona18_3, 'default', 1);
@@ -1222,6 +1242,7 @@
         zona18_3.click(function(){
             audio[1].play();
             animacionSalida(zona18_3, 'default', .1);
+            zonaPantalla18++;
             aciertos++;
             animacionEntrada(paloma18_3, 'default', 1);
             animacionEntrada(zona18_4, 'default', 1);
@@ -1230,28 +1251,29 @@
         zona18_4.click(function(){
             audio[1].play();
             animacionSalida(zona18_4, 'default', .1);
+            zonaPantalla18++;
             aciertos++;
             animacionEntrada(paloma18_4, 'default', 1);
             salidaSim18();
         });
 
         function salidaSim18(){
-            animacionSalida(sim18, 'default', 1, 1);
-            animacionSalida(paloma18_1, 'default', 1, 1);
-            animacionSalida(paloma18_2, 'default', 1, 1);
-            animacionSalida(paloma18_3, 'default', 1, 1);
-            animacionSalida(paloma18_4, 'default', 1, 1);
-            animacionSalida(tache18_1, 'default', 1, 1);
-            animacionSalida(tache18_2, 'default', 1, 1);
-            animacionSalida(tache18_3, 'default', 1, 1);
-            animacionSalida(tache18_4, 'default', 1, 1);
+            animacionSalida(sim18, 'default', 1, 3);
+            animacionSalida(paloma18_1, 'default', 1, 3);
+            animacionSalida(paloma18_2, 'default', 1, 3);
+            animacionSalida(paloma18_3, 'default', 1, 3);
+            animacionSalida(paloma18_4, 'default', 1, 3);
+            animacionSalida(tache18_1, 'default', 1, 3);
+            animacionSalida(tache18_2, 'default', 1, 3);
+            animacionSalida(tache18_3, 'default', 1, 3);
+            animacionSalida(tache18_4, 'default', 1, 3);
             simulacion19();
         }
 
         // Simulacion 19------------------------------------------------------
         function simulacion19(){
-            animacionEntrada(sim19, 'default', 1, 1);
-            animacionEntrada(zona19_1, 'default', 1, 1);
+            animacionEntrada(sim19, 'default', 1, 3);
+            animacionEntrada(zona19_1, 'default', 1, 3);
         }
 
         sim19.click(function(){
@@ -1268,17 +1290,17 @@
         });
 
         function salidaSim19(){
-            animacionSalida(sim19, 'default', 1, 1);
+            animacionSalida(sim19, 'default', 1, 3);
             animacionSalida(zona19_1, 'default', .1);
-            animacionSalida(paloma19_1, 'default', 1, 1);
-            animacionSalida(tache19_1, 'default', 1, 1);
+            animacionSalida(paloma19_1, 'default', 1, 3);
+            animacionSalida(tache19_1, 'default', 1, 3);
             simulacion20();
         }
 
         // Simulacion 20------------------------------------------------------
         function simulacion20(){
-            animacionEntrada(sim20, 'default', 1, 1);
-            animacionEntrada(zona20_1, 'default', 1, 1);
+            animacionEntrada(sim20, 'default', 1, 3);
+            animacionEntrada(zona20_1, 'default', 1, 3);
         }
 
         sim20.click(function(){
@@ -1295,17 +1317,17 @@
         });
 
         function salidaSim20(){
-            animacionSalida(sim20, 'default', 1, 1);
+            animacionSalida(sim20, 'default', 1, 3);
             animacionSalida(zona20_1, 'default', .1);
-            animacionSalida(paloma20_1, 'default', 1, 1);
-            animacionSalida(tache20_1, 'default', 1, 1);
+            animacionSalida(paloma20_1, 'default', 1, 3);
+            animacionSalida(tache20_1, 'default', 1, 3);
             simulacion21();
         }
 
         // Simulacion 21-----------------------------------------------------
         function simulacion21(){
-            animacionEntrada(sim21, 'default', 1, 1);
-            animacionEntrada(zona21_1, 'default', 1, 1);
+            animacionEntrada(sim21, 'default', 1, 3);
+            animacionEntrada(zona21_1, 'default', 1, 3);
         }
         
 
@@ -1328,6 +1350,7 @@
         zona21_1.click(function(){
             audio[1].play();
             animacionSalida(zona21_1, 'default', .1);
+            zonaPantalla21++;
             aciertos++;
             animacionEntrada(paloma21_1, 'default', 1);
             animacionEntrada(zona21_2, 'default', 1);
@@ -1336,17 +1359,18 @@
         zona21_2.click(function(){
             audio[1].play();
             animacionSalida(zona21_2, 'default', .1);
+            zonaPantalla21++;
             aciertos++;
             animacionEntrada(paloma21_2, 'default', 1);
             salidaSim21();
         });
 
         function salidaSim21(){
-            animacionSalida(sim21, 'default', 1, 1);
-            animacionSalida(paloma21_1, 'default', 1, 1);
-            animacionSalida(paloma21_2, 'default', 1, 1);
-            animacionSalida(tache21_1, 'default', 1, 1);
-            animacionSalida(tache21_2, 'default', 1, 1);
+            animacionSalida(sim21, 'default', 1, 3);
+            animacionSalida(paloma21_1, 'default', 1, 3);
+            animacionSalida(paloma21_2, 'default', 1, 3);
+            animacionSalida(tache21_1, 'default', 1, 3);
+            animacionSalida(tache21_2, 'default', 1, 3);
             animacionSalida(botonInstrucciones, 'default', 1, 1);
             retroEvaluacion();
         }
@@ -1360,20 +1384,20 @@
             calificacion.css({
                 'fontSize': '32px',
                 'color': '#13375B', 
-                'top': '288px',
-                'left': '610px'
+                'top': '301px',
+                'left': '588px'
             });
 
             const intentos = aplicacion.verIntento();
 
-            if(promedio >= 60 && intentos <= 2){
-                if(promedio >= 80){
+            if(promedio >= 70 && intentos <= 2){
+                if(promedio >= 90){
                     retroA();
                 }
-                else if(promedio >= 70){
+                else if(promedio >= 80){
                     retroB();
                 }
-                else if(promedio >= 60){
+                else if(promedio >= 70){
                     retroC();
                 }
             }
@@ -1382,6 +1406,7 @@
                 animacionEntrada(retroMala, 'default', 1, 1);
                 if(intentos < 2){
                     animacionEntrada(reintentar, 'default', 1, 1);
+                    animacionEntrada(reiniciar, 'default', 1, 1);
                 }
             }
             
@@ -1405,6 +1430,10 @@
 
         reintentar.click(function(){
             aplicacion.recargarPagina();
+        });
+
+        reiniciar.click(function(){
+            aplicacion.irPagina(1)
         });
 
     </script>
