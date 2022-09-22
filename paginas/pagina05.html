@@ -81,6 +81,7 @@
                 setTimeout(()=>{
                     document.getElementById("video1").play();
                     video1.on("ended", function() {
+                        aplicacion.terminaPantalla();
                     });
                 }, 1000);
             }
