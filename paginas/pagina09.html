@@ -22,72 +22,122 @@
 </head>
 <body class="pagina">
 
-    <img class="elementos" id="texto" src="../img/pagina09/texto.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="mensajeSig" src="../img/pagina09/mensajeSig.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="infografia" src="../img/pagina09/infografia.png" data-posX="51" data-posY="306"/>
-    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="266" data-posY="306"/>
+    <img class="elementos" id="texto1" src="../img/pagina09/texto1.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="texto2" src="../img/pagina09/texto2.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="texto3" src="../img/pagina09/texto3.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="mensajeSig" src="../img/pagina09/avanzar.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="295" data-posY="359"/>
     <img class="elementos" id="tutorial" src="../img/pagina09/tutorial.png" data-posX="158" data-posY="409"/>
 
-    
+    <input class="elementos" type="text" id="inputId" data-posX="694" data-posY="370" placeholder="Ingresa tu No. de Empleado">
+
+    <a href="../infografia/GeneralidadesGattaran.pdf" target="_blank" class="elementos" id="infografia" data-posX="32" data-posY="359">
+        <img src="../img/pagina09/infografia.png" />
+    </a>
+
+    <video class="elementos" id="video1" data-posX="0" data-posY="50"  autobuffer controls controlsList="nodownload nofullscreen">
+        <source src="../video/video1.mp4" type="video/mp4" />
+    </video>
+
+    <img class="elementos" id="cerrar" src="../img/pagina09/cerrarPop.png" data-posX="980" data-posY="66"/>
     <!-- Script de la página -->
     <script>
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
-        const texto = $('#texto');
+        const texto1 = $('#texto1');
+        const texto2 = $('#texto2');
+        const texto3 = $('#texto3');
         const mensajeSig = $('#mensajeSig');
         const infografia = $('#infografia');
         const video = $('#video');
         const tutorial = $('#tutorial');
+        const cerrar = $('#cerrar');
 
+        const inputId = $('#inputId');
+
+        inputId.css({
+            'width': '268px',
+            'height': '34px',
+            'border': 'none',
+            'background': '#FCCC75'
+        });
+        
+        const video1 = $('#video1');
         infografia.css('cursor', 'pointer');
         video.css('cursor', 'pointer');
         tutorial.css('cursor', 'pointer');
+        cerrar.css('cursor', 'pointer');
+        
 
         // Audios------------------------------------------------------
         const audio = [
             new Audio('../audios/gattaran_9.mp3'),
             new Audio('../audios/gattaran_9.1.mp3'),
             new Audio('../audios/gattaran_9.2.mp3'),
+            new Audio('../audios/gattaran_9.3.mp3'),
         ]
 
         // Al cargarse la página
         $(window).on("load", function(){
             redimensionarElementos();
+            aplicacion.activarBotonAdelante();
             aplicacion.cargando(iniciarContenido);
         });
 
         function iniciarContenido(){
             aplicacion.reproducirAudio(audio[0], herramientas, 1);
-            animacionEntrada(texto, 'default', 1, 2);
+            animacionEntrada(texto1, 'default', 1, 1);
         }
 
         function herramientas(){
-            aplicacion.reproducirAudio(audio[1], avanzarPantalla, 1);
-        }
-
-        function avanzarPantalla(){
-            aplicacion.reproducirAudio(audio[2], finalPantalla, 1);
+            aplicacion.reproducirAudio(audio[1], introId, 1);
+            animacionEntrada(texto2, 'default', 1, 1);
             animacionEntrada(infografia, 'default', 1);
             animacionEntrada(video, 'default', 1, .5);
             animacionEntrada(tutorial, 'default', 1, 1);
         }
 
-        infografia.click(function(){
-            aplicacion.irPagina(6);
-        });
+        function introId(){
+            aplicacion.reproducirAudio(audio[2], avanzarPantalla, 1);
+            animacionEntrada(texto3, 'default', 1, 1);
+            animacionEntrada(inputId, 'default', 1, 1);
+        }
+
+        function avanzarPantalla(){
+            aplicacion.reproducirAudio(audio[3], null, 1);
+            animacionEntrada(mensajeSig, 'default', 1, 1);
+        }
 
         video.click(function(){
-            aplicacion.irPagina(5);
+            if(video.css('cursor') == 'pointer'){
+                animacionEntrada(video1, 'default', 1, 1);
+                animacionEntrada(cerrar, 'default', 1, 1);
+
+                setTimeout(()=>{
+                    document.getElementById("video1").play();
+                    video1.on("ended", function() {
+
+                    });
+                }, 1000);
+            }
         });
 
         tutorial.click(function(){
             aplicacion.irPagina(7);
         });
 
-        function finalPantalla(){
-            aplicacion.terminaPantalla();
-        }
+        cerrar.click(function(){
+            animacionSalida(video1, 'default', 1, 1);
+            animacionSalida(cerrar, 'default', 1, 1);
+            document.getElementById("video1").pause();
+            document.getElementById("video1").currentTime = 0;
+        });
+
+        inputId.on('input', function(){
+            const noEmpleado = inputId.val()
+            aplicacion.agregarNoEmpleado(noEmpleado);
+        });
 
     </script>
 </body>
