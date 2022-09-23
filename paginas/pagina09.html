@@ -26,12 +26,12 @@
     <img class="elementos" id="texto2" src="../img/pagina09/texto2.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="texto3" src="../img/pagina09/texto3.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="mensajeSig" src="../img/pagina09/avanzar.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="295" data-posY="359"/>
-    <img class="elementos" id="tutorial" src="../img/pagina09/tutorial.png" data-posX="158" data-posY="409"/>
+    <img class="elementos" id="video" src="../img/pagina09/video.png" data-posX="405" data-posY="425"/>
+    <img class="elementos" id="tutorial" src="../img/pagina09/tutorial.png" data-posX="277" data-posY="425"/>
 
-    <input class="elementos" type="text" id="inputId" data-posX="694" data-posY="370" placeholder="Ingresa tu No. de Empleado">
+    <input class="elementos" type="text" id="inputId" data-posX="637" data-posY="460" placeholder="Ingresa tu No. de Empleado">
 
-    <a href="../infografia/GeneralidadesGattaran.pdf" target="_blank" class="elementos" id="infografia" data-posX="32" data-posY="359">
+    <a href="../infografia/GeneralidadesGattaran.pdf" target="_blank" class="elementos" id="infografia" data-posX="149" data-posY="425">
         <img src="../img/pagina09/infografia.png" />
     </a>
 
@@ -57,10 +57,11 @@
         const inputId = $('#inputId');
 
         inputId.css({
-            'width': '268px',
+            'width': '307px',
             'height': '34px',
             'border': 'none',
-            'background': '#FCCC75'
+            'background': '#FCCC75',
+            'text-align': 'center'
         });
         
         const video1 = $('#video1');
@@ -98,9 +99,9 @@
         function herramientas(){
             aplicacion.reproducirAudio(audio[1], introId, 1);
             animacionEntrada(texto2, 'default', 1, 1);
-            animacionEntrada(infografia, 'default', 1);
-            animacionEntrada(video, 'default', 1, .5);
-            animacionEntrada(tutorial, 'default', 1, 1);
+            animacionEntrada(infografia, 'default', 1, 2);
+            animacionEntrada(tutorial, 'default', 1, 2.5);
+            animacionEntrada(video, 'default', 1, 3);
         }
 
         function introId(){
@@ -111,7 +112,7 @@
 
         function avanzarPantalla(){
             aplicacion.reproducirAudio(audio[3], null, 1);
-            animacionEntrada(mensajeSig, 'default', 1, 1);
+            // animacionEntrada(mensajeSig, 'default', 1, 1);
         }
 
         video.click(function(){
