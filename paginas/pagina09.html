@@ -87,7 +87,7 @@
         // Al cargarse la página
         $(window).on("load", function(){
             redimensionarElementos();
-            aplicacion.activarBotonAdelante();
+            aplicacion.terminaPantalla();
             aplicacion.cargando(iniciarContenido);
         });
 
@@ -112,6 +112,7 @@
 
         function avanzarPantalla(){
             aplicacion.reproducirAudio(audio[3], null, 1);
+            aplicacion.terminaPantalla();
             // animacionEntrada(mensajeSig, 'default', 1, 1);
         }
 

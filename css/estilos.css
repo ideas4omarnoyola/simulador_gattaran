@@ -416,3 +416,11 @@ body{
     border: none;
     cursor: pointer;
 }
+
+p.marcaAgua{
+    width: 300px;
+    height: 40px;
+    opacity: .3;
+    font-size: 32px;
+    color: white;
+}

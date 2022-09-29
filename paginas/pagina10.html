@@ -199,11 +199,33 @@
     <!-- Inicio -->
     <img class="elementos" id="titulo" src="../img/pagina10/titulo.png" data-posX="0" data-posY="66"/>
 
+
     <!-- Calificación -->
     <img class="elementos sims" id="avanzado" src="../img/pagina10/avanzado.png" data-posX="0" data-posY="0"/>
     <img class="elementos sims" id="intermedio" src="../img/pagina10/intermedio.png" data-posX="0" data-posY="0"/>
     <img class="elementos sims" id="basico" src="../img/pagina10/basico.png" data-posX="0" data-posY="0"/>
     <img class="elementos sims" id="retroMala" src="../img/pagina10/retroMala.png" data-posX="0" data-posY="0"/>
+
+    <!-- Marca de Agua -->
+    <p class="elementos marcaAgua" data-posX="29" data-posY="197"></p>
+    <p class="elementos marcaAgua" data-posX="29" data-posY="317"></p>
+    <p class="elementos marcaAgua" data-posX="29" data-posY="437"></p>
+    <p class="elementos marcaAgua" data-posX="251" data-posY="127"></p>
+    <p class="elementos marcaAgua" data-posX="251" data-posY="270"></p>
+    <p class="elementos marcaAgua" data-posX="251" data-posY="386"></p>
+    <p class="elementos marcaAgua" data-posX="251" data-posY="501"></p>
+    <p class="elementos marcaAgua" data-posX="478" data-posY="98"></p>
+    <p class="elementos marcaAgua" data-posX="478" data-posY="220"></p>
+    <p class="elementos marcaAgua" data-posX="478" data-posY="362"></p>
+    <p class="elementos marcaAgua" data-posX="478" data-posY="477"></p>
+    <p class="elementos marcaAgua" data-posX="681" data-posY="164"></p>
+    <p class="elementos marcaAgua" data-posX="681" data-posY="286"></p>
+    <p class="elementos marcaAgua" data-posX="681" data-posY="286"></p>
+    <p class="elementos marcaAgua" data-posX="681" data-posY="396"></p>
+    <p class="elementos marcaAgua" data-posX="845" data-posY="113"></p>
+    <p class="elementos marcaAgua" data-posX="845" data-posY="280"></p>
+    <p class="elementos marcaAgua" data-posX="845" data-posY="447"></p>
+
     <img class="elementos sims" id="reintentar" src="../img/pagina10/reintentar.png" data-posX="490" data-posY="385"/>
     <img class="elementos sims" id="reiniciar" src="../img/pagina10/reiniciar.png" data-posX="200" data-posY="385"/>
     <div class="elementos" id="calificacion"></div>
@@ -440,7 +462,8 @@
         botonInstrucciones.css('cursor', 'pointer');
         cerrarInstrucciones.css('cursor', 'pointer');
         sims.css('cursor', 'pointer');
-        
+
+        const marcaAgua = $('.marcaAgua');
 
         const avanzado = $('#avanzado');
         const intermedio = $('#intermedio');
@@ -1391,6 +1414,18 @@
                 'top': '301px',
                 'left': '588px'
             });
+
+            const noEmpleado = aplicacion.verNoEmpleado();
+
+            marcaAgua.each(function(){
+                $(this).html(noEmpleado);
+            });
+
+            setTimeout(()=>{
+                marcaAgua.css({
+                    'display': 'block',
+                });
+            }, 1000);
 
             const intentos = aplicacion.verIntento();
 
